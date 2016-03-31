@@ -1,6 +1,23 @@
 import struct
 import sys
 from array import array, ArrayType
+try:
+    import autobench.i2c.aardvark as api
+except ImportError, ex1:
+    import imp
+    # import platform
+    # ext = platform.system() in ('Windows', 'Microsoft') and '.dll' or '.so'
+    if struct.calcsize("P") * 8 == 64:
+        ext = '_x64.dll'
+    else:
+        ext = '.dll'
+    try:
+        api = imp.load_dynamic('aardvark', '.\\i2c\\aardvark' + ext)
+    except ImportError, ex2:
+        import_err_msg = 'Error importing aardvark%s\n' % ext
+        import_err_msg += '  Architecture of aardvark%s may be wrong\n' % ext
+        import_err_msg += '%s\n%s' % (ex1, ex2)
+        raise ImportError(import_err_msg)
 
 # ==========================================================================
 AA_API_VERSION = 0x050a  # v5.10
@@ -39,24 +56,6 @@ def array_f32(n): return array('f', '\0\0\0\0' * n)
 
 def array_f64(n): return array('d', '\0\0\0\0\0\0\0\0' * n)
 
-
-try:
-    import lib.Aardvark.x64.aardvark as api
-except ImportError, ex1:
-    import imp
-    import platform
-    # ext = platform.system() in ('Windows', 'Microsoft') and '.dll' or '.so'
-    ext = '.dll'
-    try:
-        if struct.calcsize("P") * 8 == 32:
-            api = imp.load_dynamic('aardvark', '.\\lib\\Aardvark\\win32\\aardvark' + ext)
-        else:
-            api = imp.load_dynamic('aardvark', '.\\lib\\Aardvark\\x64\\aardvark' + ext)
-    except ImportError, ex2:
-        import_err_msg = 'Error importing aardvark%s\n' % ext
-        import_err_msg += '  Architecture of aardvark%s may be wrong\n' % ext
-        import_err_msg += '%s\n%s' % (ex1, ex2)
-        raise ImportError(import_err_msg)
 
 AA_SW_VERSION = api.py_version() & 0xffff
 AA_REQ_API_VERSION = (api.py_version() >> 16) & 0xffff

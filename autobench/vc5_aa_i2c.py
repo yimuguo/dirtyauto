@@ -1,5 +1,5 @@
-from lib.vc5_summary import VC5Get
-from lib.aa_i2c import AAReadWrite
+from autobench.i2c.vc5_summary import VC5Get
+from autobench.i2c.aa_i2c import AAReadWrite
 import sys
 # ===================Read Specific Summary File From Input==================
 CFG_NUM = int(sys.argv[2])
