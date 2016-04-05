@@ -82,7 +82,7 @@ def main(start_temp, stop_temp, stepping, serial=0, tol_temp=0.2):
     for temp in range(start_temp, stop_temp+stepping, stepping):
         curr_temp = ak692.read_temp()
         ak692.set_temp(temp)
-        print("RAMP TEMP TO " + str(temp), end='')
+        print("RAMP TEMP TO " + str(temp))
         while not((curr_temp < (temp + tol_temp)) and (curr_temp > (temp - tol_temp))):
             curr_temp = ak692.read_temp()
             print(".", end='')
@@ -99,9 +99,10 @@ def main(start_temp, stop_temp, stepping, serial=0, tol_temp=0.2):
             logfile.write("W/O TEMP CAL " + str(band) + '\n')
             cal_band = ak692.cal_vco()
             print("Calibrated with tempco: " + str(cal_band))
+            ak692.cal_vco()
             time.sleep(0.05)
-        vco_band = ak692.cal_vco()
         frequency = ak692.freq()
+        vco_band = list(ak692.dut_i2c.aa_read_i2c(47))[0]
         print('\nLOG: ' + str(temp) + '\t' + str(frequency) + '\t' + str(vco_band))
         logfile.write(str(temp) + '\t' + str(frequency) + '\t' + str(vco_band) + '\n')
         # if temp == start_temp:

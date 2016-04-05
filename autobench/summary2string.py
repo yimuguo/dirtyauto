@@ -11,7 +11,7 @@ import os
 #     SummaryFile = open(filename, 'r')
 # except:
 #     os.exit('no summary')
-SummaryFile = open(".\\example\\Summary-046_updated_final.txt", 'r')
+SummaryFile = open(r".\autobench\data\5P49V5901B821_Cisco-Bateman_20160217-Final_Summary.txt", 'r')
 
 # Read Hex Strings from Summary File
 conf_string = []
