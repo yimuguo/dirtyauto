@@ -10,10 +10,9 @@ sys.path.append('.')
 
 
 class SweepTempVCO(object):
-    def __init__(self):
-        self.i2c_add = 0x68
+    def __init__(self, i2c_add=0x68):
         self.vdd = 5
-        self.dut_i2c = AAReadWrite(0, self.i2c_add, True)
+        self.dut_i2c = AAReadWrite(0, i2c_add, True)
         self.power = visa.ResourceManager().open_resource('GPIB0::13::INSTR')
         self.fcounter = visa.ResourceManager().open_resource('GPIB0::3::INSTR')
         self.dut_i2c.length = 1

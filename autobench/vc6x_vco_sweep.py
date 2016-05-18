@@ -7,8 +7,7 @@ sys.path.append('.')
 
 
 def main(start_temp, stop_temp, stepping, serial=0, tol_temp=0.2):
-    vc6x = SweepTempVCO()
-    vc6x.i2c_add = 0x6a
+    vc6x = SweepTempVCO(0x6a)
     vc6x.vdd = 3.3
     logfile = open("log" + str(serial) + '_' + str(start_temp) + "_" + str(stop_temp) + ".txt", 'w+')
     time.sleep(0.1)
