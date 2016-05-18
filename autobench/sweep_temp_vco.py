@@ -11,11 +11,13 @@ sys.path.append('.')
 
 class SweepTempVCO(object):
     def __init__(self):
-        self.dut_i2c = AAReadWrite(0, 0x68, True)
+        self.i2c_add = 0x68
+        self.vdd = 5
+        self.dut_i2c = AAReadWrite(0, self.i2c_add, True)
         self.power = visa.ResourceManager().open_resource('GPIB0::13::INSTR')
         self.fcounter = visa.ResourceManager().open_resource('GPIB0::3::INSTR')
         self.dut_i2c.length = 1
-        self.power.write("APPL P6V,5,0.3")
+        self.power.write("APPL P6V,%d,0.3" % self.vdd)
         self.power.write("APPL P25V,3.3,0.2")
         self.chamber = visa.ResourceManager().open_resource('GPIB0::1::INSTR')
 
@@ -42,8 +44,8 @@ class SweepTempVCO(object):
             self.power.write("OUTPUT:STATe OFF;*OPC?")
             self.power.read()
 
-    def freq(self):
-        curr_freq = self.fcounter.query(':MEAS:FREQ? 100E+006,1')
+    def freq(self, channel=1):
+        curr_freq = self.fcounter.query(':MEAS:FREQ? 100E+006,1, (@%d)' % channel)
         # time.sleep(0.05)
         return float(curr_freq)
 
