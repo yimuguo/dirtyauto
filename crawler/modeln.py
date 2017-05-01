@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup
-import urllib2
+import requests
 
-r = urllib2.urlopen('http://www.aflcio.org/Legislation-and-Politics/Legislative-Alerts').read()
-soup = BeautifulSoup(r)
-print(type(soup))
+page = requests.get("http://direct.modeln.idt.com/")
+soup = BeautifulSoup(page.content, 'html.parser')
+print(soup.prettify)
