@@ -8,25 +8,74 @@
 	"buffers":
 	[
 		{
-			"file": "tcs2pdf.py",
+			"file": "crawler/modeln.py",
 			"settings":
 			{
-				"buffer_size": 0,
+				"buffer_size": 256,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Program Files (x86)/IDT/Timing Commander/IDTTCToolkit.exe.config",
+			"settings":
+			{
+				"buffer_size": 1322,
 				"line_ending": "Windows"
 			}
 		}
 	],
-	"build_system": "",
+	"build_system": "Anaconda Python Builder",
 	"build_system_choices":
 	[
+		[
+			[
+				[
+					"Anaconda Python Builder",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Anaconda Python Builder",
+				""
+			]
+		]
 	],
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 150.0,
-		"last_filter": "",
+		"height": 357.0,
+		"last_filter": "pull",
 		"selected_items":
 		[
+			[
+				"pull",
+				"Git: Pull"
+			],
+			[
+				"git pull",
+				"Git: Pull"
+			],
+			[
+				"git push",
+				"Git: Push"
+			],
+			[
+				"git comm",
+				"Git: Commit"
+			],
+			[
+				"git add",
+				"Git: Add All"
+			],
 			[
 				"package controll",
 				"Package Control: List Packages"
@@ -53,10 +102,20 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Users/yguo/Documents/GitHub/dirtyauto"
+		"/C/Users/yguo/Documents/GitHub/dirtyauto",
+		"/C/Users/yguo/Documents/GitHub/dirtyauto/crawler"
 	],
 	"file_history":
 	[
+		"/C/Users/yguo/Downloads/CheckIDTConnection.txt",
+		"/C/Users/yguo/Dropbox (IDT)/Tools/Enable_Sync_your_settings.reg",
+		"/C/Users/yguo/Dropbox (IDT)/Lync-UccApi-0.UccApilog",
+		"/C/Users/yguo/AppData/Local/Microsoft/Office/16.0/Lync/Tracing/SCT_OCAddin_0.log",
+		"/C/Users/yguo/AppData/Local/Microsoft/Office/16.0/Lync/Tracing/SCT_Lync_0.log",
+		"/C/Users/yguo/AppData/Roaming/Sublime Text 3/Packages/User/Git.sublime-settings",
+		"/C/Users/yguo/Documents/GitHub/dirtyauto/tcs2pdf.py",
+		"/C/Users/yguo/AppData/Roaming/Sublime Text 3/Packages/User/Anaconda.sublime-settings",
+		"/C/Users/yguo/Documents/GitHub/dirtyauto/st3.sublime-project",
 		"/J/VersaClock3S/CodeValidation/5P35023/5P35023-133(Foxconn-CISCO)/5P35023-133_A#2_Summary.txt",
 		"/J/VersaClock3S/CodeValidation/5P35023/5P35023-xxx_Foryou/5P35023-xxx_B#0_Summary.txt",
 		"/J/VersaClock3S/CodeValidation/5P35023/5P35023-xxx(DJI-China)/5P35023-xxx_DIJ_Summary.txt",
@@ -72,7 +131,7 @@
 	],
 	"find":
 	{
-		"height": 0.0
+		"height": 32.0
 	},
 	"find_in_files":
 	{
@@ -86,6 +145,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"internal",
+			"5061",
+			"CORPSKYPE",
+			"corpskype",
+			"discover"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -108,19 +172,19 @@
 			[
 				{
 					"buffer": 0,
-					"file": "tcs2pdf.py",
+					"file": "crawler/modeln.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 0,
+						"buffer_size": 256,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								256,
+								256
 							]
 						],
 						"settings":
@@ -133,13 +197,41 @@
 					},
 					"stack_index": 0,
 					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/C/Program Files (x86)/IDT/Timing Commander/IDTTCToolkit.exe.config",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1322,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1322,
+								1322
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/zzz A File Icon zzz/aliases/XML (Config).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
 				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 0.0
+		"height": 32.0
 	},
 	"input":
 	{
@@ -167,16 +259,24 @@
 			1.0
 		]
 	},
-	"menu_visible": true,
+	"menu_visible": false,
+	"output.exec":
+	{
+		"height": 581.0
+	},
 	"output.find_results":
 	{
 		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 124.0
 	},
 	"pinned_build_system": "",
 	"project": "st3.sublime-project",
 	"replace":
 	{
-		"height": 0.0
+		"height": 60.0
 	},
 	"save_all_on_build": true,
 	"select_file":
