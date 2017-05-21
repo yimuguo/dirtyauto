@@ -5,7 +5,10 @@
 			"file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
 			"name": "Anaconda Python Builder",
 			"selector": "source.python",
-			"shell_cmd": "\"C:\\Anaconda3\\envs\\py35\\python\" -u \"$file\""
+			"shell_cmd": "\"C:\\Anaconda3\\envs\\py35\\python.exe\" -u \"$file\"",
+			"env": {
+				"PYTHONPATH": "D:\\Eamu\\Documents\\Github\\dirtyauto"
+			}
 		}
 	],
 	"folders":
@@ -13,5 +16,19 @@
 		{
 			"path": "."
 		}
-	]
+	],
+	"settings":
+	{
+		"working_dir": "${project_path:${folder}}",
+		"autoformat_on_save": true,
+		"auto_python_builder_enabled": false,
+		"env": {
+		"PYTHONPATH": "D:\\Eamu\\Documents\\Github\\dirtyauto"
+		}, 
+		"extra_paths":
+        [
+            "D:\\Eamu\\Documents\\Github\\dirtyauto",
+            "/opt/maya/SundayPipeline2014/SundayPython"
+        ]
+	}
 }

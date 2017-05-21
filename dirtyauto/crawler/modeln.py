@@ -14,7 +14,8 @@ driver = webdriver.Chrome()
 driver.get(
     "http://yguo:Bbsit911(!!@corpqlikprod/QvAJAXZfc/opendoc.htm?document=Sales%2FOpportunityMetrics.qvw&host=QVS%40corpqv1")
 wait = WebDriverWait(driver, 10)
-wait.until(EC.element_to_be_selected('#\31 1 > div.QvCaption > div.QvCaptionImgContainer > div.QvCaptionIcon.caption-icon-16x16.caption-XL-dark-icon'))
+import pdb; pdb.set_trace()  # breakpoint 43463e03 //
+wait.until(EC.element_to_be_clickable('#\31 1 > div.QvCaption > div.QvCaptionImgContainer > div.QvCaptionIcon.caption-icon-16x16.caption-XL-dark-icon'))
 send_xls_btn = driver.find_element_by_xpath('//*[@id="11"]/div[1]/div[1]/div[1]')
 print(send_xls_btn)
 send_xls_btn.click()
