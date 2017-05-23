@@ -10,7 +10,7 @@ page = requests.get(
     "http://corpqlikprod/QvAJAXZfc/AccessPoint.aspx?open=&id=QVS%40corpqv1%7CSales%2FOpportunityMetrics.qvw&client=Ajax")
 soup = BeautifulSoup(page.content, 'html.parser')
 print(soup.prettify)
-driver = webdriver.Chrome()
+driver = webdriver.Edge()
 driver.get(
     "http://yguo:Bbsit911(!!@corpqlikprod/QvAJAXZfc/opendoc.htm?document=Sales%2FOpportunityMetrics.qvw&host=QVS%40corpqv1")
 wait = WebDriverWait(driver, 10)
