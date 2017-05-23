@@ -7,7 +7,7 @@
 			"selector": "source.python",
 			"shell_cmd": "\"C:\\Anaconda3\\envs\\py35\\python.exe\" -u \"$file\"",
 			"env": {
-				"PYTHONPATH": "D:\\Eamu\\Documents\\Github\\dirtyauto"
+				"PYTHONPATH": "C:\\devdir\\dirtyauto"
 			}
 		}
 	],
@@ -23,12 +23,13 @@
 		"autoformat_on_save": true,
 		"auto_python_builder_enabled": false,
 		"env": {
-		"PYTHONPATH": "D:\\Eamu\\Documents\\Github\\dirtyauto"
+		"PYTHONPATH": "C:\\devdir\\dirtyauto"
 		}, 
 		"extra_paths":
         [
-            "D:\\Eamu\\Documents\\Github\\dirtyauto",
-            "/opt/maya/SundayPipeline2014/SundayPython"
-        ]
+            "C:\\devdir\\dirtyauto",
+        ],
+        "follow_symlinks": true,
+        
 	}
 }
