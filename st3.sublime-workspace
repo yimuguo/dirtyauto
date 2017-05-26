@@ -3,82 +3,43 @@
 	{
 		"selected_items":
 		[
+			[
+				"fou",
+				"found_parts"
+			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"contents": "from unittest import TestCase\nfrom dirtyauto.crawler.digikey import DigikeyPartInfo\n\n\nclass TestPartNumber(TestCase):\n\tidtpn = DigikeyPartInfo('5PB1102')\n\n\tdef test_found_parts():\n\t\tpass\n",
-			"file": "dirtyauto/tests/test_digikey.py",
-			"file_size": 113,
-			"file_write_time": 131399793902045938,
-			"settings":
-			{
-				"buffer_size": 187,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/D/Eamu/Documents/Github/vec2pat/vec2pat/tests/test_VC5Get.py",
-			"settings":
-			{
-				"buffer_size": 647,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "from bs4 import BeautifulSoup\nimport requests\n\n\nclass DigikeyPartInfo(object):\n    \"\"\"\n    Get Part Info from digikey, contains\n    \"\"\"\n    soup = BeautifulSoup(\"\", 'html.parser')\n\n    def __init__(self, partn):\n        \"\"\"\n        :param partn: The stadard part number\n        \"\"\"\n        self.partn = partn\n\n    def get_html(self):\n        page = requests.get(\n            \"https://www.digikey.com/products/en?keywords=\" + self.partn)\n        self.soup = BeautifulSoup(page.text, 'html.parser').encode('utf-8')\n\n    def found_parts(self):\n        return self.soup.fin\n",
 			"file": "dirtyauto/crawler/digikey.py",
-			"file_size": 535,
-			"file_write_time": 131399000082705167,
 			"settings":
 			{
-				"buffer_size": 570,
+				"buffer_size": 757,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"contents": "Package Control Messages\n========================\n\nSublimeCodeIntel\n----------------\n\n  SublimeCodeIntel\n  ================\n  \n   ____        _     _ _                 ____          _      ___       _       _\n  / ___| _   _| |__ | (_)_ __ ___   ___ / ___|___   __| | ___|_ _|_ __ | |_ ___| |\n  \\___ \\| | | | '_ \\| | | '_ ` _ \\ / _ \\ |   / _ \\ / _` |/ _ \\| || '_ \\| __/ _ \\ |\n   ___) | |_| | |_) | | | | | | | |  __/ |__| (_) | (_| |  __/| || | | | ||  __/ |\n  |____/ \\__,_|_.__/|_|_|_| |_| |_|\\___|\\____\\___/ \\__,_|\\___|___|_| |_|\\__\\___|_|\n  A full-featured code intelligence and smart autocomplete engine for Sublime Text.\n     (Code intelligence plugin ported from Open Komodo Editor to Sublime Text)\n  \n  \n  +-------------------------------- HELP WANTED ---------------------------------+\n  |     Maintaining this project is hard, I do it in my spare time, but I'm      |\n  |     basically all alone. If anyone is interested in contributing, please     |\n  |     contact me. I really need much more help maintaining SublimeCodeIntel    |\n  |                                                                              |\n  |                       Follow me on twitter @germbravo                        |\n  |           You can find us at #sublimecodeintel on irc.freenode.net           |\n  |                                                                              |\n  |             If you like SublimeCodeIntel, please make a donation:            |\n  |        http://sublimecodeintel.github.io/SublimeCodeIntel/donate.html        |\n  +------------------------------------------------------------------------------+\n  \n  \n  Features\n  --------\n  \n  Supports all the languages Komodo Editor supports for Code Intelligence (CIX, CodeIntel2):\n  \n  JavaScript, Mason, XBL, XUL, RHTML, SCSS, Python, HTML, Ruby, Python3, XML, Sass, XSLT, Django, HTML5, Perl, CSS, Twig, Less, Smarty, Node.js, Tcl, TemplateToolkit, PHP.\n  \n  \n  Provides the following features:\n  \n  * Jump to Symbol Definition - Jump to the file and line of the definition of a symbol.\n  * Imports autocomplete - Shows autocomplete with the available modules/symbols in real time.\n  * Function Call tooltips - Displays information in the status bar about the working function.\n  \n  \n  + Shortcuts for jump to definition have changed:\n  \n    For Mac OS X:\n      * Jump to definition = ``Control+Click``\n      * Jump to definition = ``Control+Command+Alt+Up``\n      * Go back = ``Control+Command+Alt+Left``\n      * Manual CodeIntel = ``Control+Shift+space``\n  \n    For Linux:\n      * Jump to definition = ``Super+Click``\n      * Jump to definition = ``Control+Super+Alt+Up``\n      * Go back = ``Control+Super+Alt+Left``\n      * Manual CodeIntel = ``Control+Shift+space``\n  \n    For Windows:\n      * Jump to definition = ``Alt+Click``\n      * Jump to definition = ``Control+Windows+Alt+Up``\n      * Go back = ``Control+Windows+Alt+Left``\n      * Manual CodeIntel = ``Control+Shift+space``\n  \n  \n  \n  Notes\n  -----\n  \n  ** Restart Sublime Text after reading this **\n  \n  \n  More information\n  ----------------\n  Please take the time to read the documentation:\n  \n  In case of trouble, please read the Troubleshooting section in the README.\n  \n  * Online - http://sublimecodeintel.github.io/SublimeCodeIntel/\n  * Git - https://github.com/SublimeCodeIntel/SublimeCodeIntel\n  \n  \n  IMPORTANT\n  ---------\n  \n  Do NOT edit the default SublimeCodeIntel settings. Your changes will be lost\n  when SublimeCodeIntel is updated. ALWAYS edit the user SublimeCodeIntel settings\n  by selecting \"Preferences->Package Settings->SublimeCodeIntel->Settings - User\".\n  Note that individual settings you include in your user settings will **completely**\n  replace the corresponding default setting, so you must provide that setting in its entirety.\n",
+			"file": "/C/Users/yguo/AppData/Roaming/Sublime Text 3/Packages/User/SublimeCodeIntel.sublime-settings",
 			"settings":
 			{
-				"buffer_size": 3795,
-				"line_ending": "Windows",
-				"name": "Package Control Messages",
-				"read_only": true,
-				"scratch": true
-			}
-		},
-		{
-			"file": "dirtyauto/crawler/modeln.py",
-			"settings":
-			{
-				"buffer_size": 984,
+				"buffer_size": 1203,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "st3.sublime-project",
+			"file": "dirtyauto/tests/test_digikey.py",
 			"settings":
 			{
-				"buffer_size": 648,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/Users/Eamu/AppData/Roaming/Sublime Text 3/Packages/User/Anaconda.sublime-settings",
-			"settings":
-			{
-				"buffer_size": 338,
+				"buffer_size": 440,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		}
 	],
-	"build_system": "Packages/Python/Python.sublime-build",
+	"build_system": "Anaconda Python Builder",
 	"build_system_choices":
 	[
 		[
@@ -100,81 +61,107 @@
 				"Anaconda Python Builder",
 				""
 			]
-		],
-		[
-			[
-				[
-					"Packages/Python/Python.sublime-build",
-					""
-				],
-				[
-					"Packages/Python/Python.sublime-build",
-					"Syntax Check"
-				]
-			],
-			[
-				"Packages/Python/Python.sublime-build",
-				""
-			]
 		]
 	],
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 289.0,
-		"last_filter": "package install",
+		"height": 84.0,
+		"last_filter": "",
 		"selected_items":
 		[
 			[
-				"package install",
-				"Package Control: Install Package"
+				"key",
+				"Preferences: Key Bindings"
 			],
 			[
-				"git pull",
-				"Git: Pull"
+				"key ",
+				"Preferences: Key Bindings"
+			],
+			[
+				"test",
+				"Anaconda: Run Current File Tests"
+			],
+			[
+				"pep",
+				"Anaconda: Autoformat PEP8 Errors"
+			],
+			[
+				"set syntax py",
+				"Set Syntax: Python"
+			],
+			[
+				"require",
+				"Set Syntax: requirements.txt"
 			],
 			[
 				"pep8",
 				"Anaconda: Autoformat PEP8 Errors"
 			],
 			[
-				"push",
-				"Git: Push"
+				"git pull",
+				"Git: Pull"
 			],
 			[
-				"git comm",
-				"Git: Commit"
-			],
-			[
-				"git: add",
-				"Git: Add All"
-			],
-			[
-				"git add",
-				"Git: Add All"
+				"git stas",
+				"Git: Stash Changes"
 			],
 			[
 				"pull",
 				"Git: Pull"
 			],
 			[
+				"push",
+				"Git: Push"
+			],
+			[
+				"comm",
+				"Git: Commit"
+			],
+			[
+				"add al",
+				"Git: Add All"
+			],
+			[
+				"git comm",
+				"Git: Commit"
+			],
+			[
+				"git stash",
+				"Git: Stash Changes"
+			],
+			[
+				"add",
+				"Git: Add All"
+			],
+			[
+				"commit",
+				"Git: Commit"
+			],
+			[
+				"omm",
+				"Git: Commit"
+			],
+			[
 				"git push",
 				"Git: Push"
+			],
+			[
+				"git add",
+				"Git: Add All"
 			],
 			[
 				"package controll",
 				"Package Control: List Packages"
 			]
 		],
-		"width": 796.0
+		"width": 510.0
 	},
 	"console":
 	{
 		"height": 126.0,
 		"history":
 		[
-			"exit()",
-			"echo $project_path",
 			"import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
 		]
 	},
@@ -189,21 +176,28 @@
 	},
 	"expanded_folders":
 	[
-		"/D/Eamu/Documents/Github/dirtyauto",
-		"/D/Eamu/Documents/Github/dirtyauto/dirtyauto",
-		"/D/Eamu/Documents/Github/dirtyauto/dirtyauto/crawler"
+		"/C/Users/yguo/Documents/GitHub/dirtyauto",
+		"/C/Users/yguo/Documents/GitHub/dirtyauto/dirtyauto",
+		"/C/Users/yguo/Documents/GitHub/dirtyauto/dirtyauto/crawler",
+		"/C/Users/yguo/Documents/GitHub/dirtyauto/dirtyauto/tests"
 	],
 	"file_history":
 	[
-		"/D/Eamu/Documents/Github/dirtyauto/dirtyauto/crawler/digikey.py",
-		"/C/Users/Eamu/AppData/Roaming/Sublime Text 3/Packages/Anaconda/anaconda_lib/builder/python_builder.py",
-		"/D/Eamu/Documents/Github/dirtyauto/.gitignore",
-		"/C/Users/Eamu/AppData/Roaming/Sublime Text 3/Packages/Anaconda/anaconda_lib/linting/sublime.py",
-		"/C/Users/Eamu/AppData/Roaming/Sublime Text 3/Packages/Anaconda/Anaconda.sublime-settings",
-		"/C/Users/Eamu/AppData/Roaming/Sublime Text 3/Packages/User/EnvironmentSettings.sublime-settings",
-		"/C/Users/Eamu/AppData/Roaming/Sublime Text 3/Packages/EnvironmentSettings/EnvironmentSettings.sublime-settings",
+		"/C/Users/yguo/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/yguo/AppData/Roaming/Sublime Text 3/Packages/SublimeCodeIntel/SublimeCodeIntel.sublime-settings",
+		"/C/Users/yguo/Dropbox (IDT)/Tools/Settings/User/Package Control.sublime-settings",
+		"/C/Users/yguo/Documents/GitHub/dirtyauto/dirtyauto/tests/__init__.py",
+		"/C/Users/yguo/Documents/GitHub/dirtyauto/st3.sublime-project",
+		"/C/Users/yguo/Documents/GitHub/dirtyauto/dirtyauto/crawler/digikey.py",
+		"/J/VersaClock3S/CodeValidation/5L35023/-101(Huawei_VR)/5L35023-101_B#0_summary.txt",
+		"/C/Users/yguo/Documents/GitHub/dirtyauto/dirtyauto/crawler/modeln.py",
+		"/C/Users/yguo/AppData/Roaming/Sublime Text 3/Packages/User/Anaconda.sublime-settings",
+		"/C/Users/yguo/AppData/Roaming/Sublime Text 3/Packages/User/EnvironmentSettings.sublime-settings",
 		"/C/Program Files (x86)/IDT/Timing Commander/IDTTCToolkit.exe.config",
-		"/D/Eamu/Documents/Github/dirtyauto/crawler/modeln.py",
+		"/C/Users/yguo/Documents/GitHub/dirtyauto/crawler/modeln.py",
+		"/C/Users/yguo/AppData/Roaming/Sublime Text 3/Packages/User/SublimeREPL.sublime-settings",
+		"/C/Users/yguo/AppData/Roaming/Sublime Text 3/Packages/SublimeREPL/SublimeREPL.sublime-settings",
+		"/J/VersaClock3S/CodeValidation/5L35023/-101(Huawei_VR)/5L35023-101_B#0.tcs",
 		"/C/Users/yguo/Downloads/CheckIDTConnection.txt",
 		"/C/Users/yguo/Dropbox (IDT)/Tools/Enable_Sync_your_settings.reg",
 		"/C/Users/yguo/Dropbox (IDT)/Lync-UccApi-0.UccApilog",
@@ -211,8 +205,6 @@
 		"/C/Users/yguo/AppData/Local/Microsoft/Office/16.0/Lync/Tracing/SCT_Lync_0.log",
 		"/C/Users/yguo/AppData/Roaming/Sublime Text 3/Packages/User/Git.sublime-settings",
 		"/C/Users/yguo/Documents/GitHub/dirtyauto/tcs2pdf.py",
-		"/C/Users/yguo/AppData/Roaming/Sublime Text 3/Packages/User/Anaconda.sublime-settings",
-		"/C/Users/yguo/Documents/GitHub/dirtyauto/st3.sublime-project",
 		"/J/VersaClock3S/CodeValidation/5P35023/5P35023-133(Foxconn-CISCO)/5P35023-133_A#2_Summary.txt",
 		"/J/VersaClock3S/CodeValidation/5P35023/5P35023-xxx_Foryou/5P35023-xxx_B#0_Summary.txt",
 		"/J/VersaClock3S/CodeValidation/5P35023/5P35023-xxx(DJI-China)/5P35023-xxx_DIJ_Summary.txt",
@@ -223,12 +215,11 @@
 		"/J/VersaClock3S/CodeValidation/5L35021/-001(GCT)/JUNK.BAT",
 		"/J/VersaClock3S/CodeValidation/5P35023/5P35023-xxx_Foryou/5P35023-xxx_C#0_for-sample_spreadon8M_trace.txt",
 		"/C/Users/yguo/AppData/Roaming/Sublime Text 3/Packages/User/Package Control.sublime-settings",
-		"/C/Users/yguo/Dropbox (IDT)/Tools/Settings/User/Package Control.sublime-settings",
 		"/C/Users/yguo/Dropbox (IDT)/Tools/Settings/User/Preferences.sublime-settings"
 	],
 	"find":
 	{
-		"height": 49.0
+		"height": 32.0
 	},
 	"find_in_files":
 	{
@@ -242,8 +233,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"active_window",
-			"project_data()",
+			"~/Library/Application Support/Sublime Text 3/Packages/SublimeCodeIntel/",
 			"internal",
 			"5061",
 			"CORPSKYPE",
@@ -256,8 +246,10 @@
 		"regex": false,
 		"replace_history":
 		[
+			"C:\\\\Users\\\\yguo\\\\AppData\\\\Roaming\\\\Sublime Text 3\\\\Packages\\\\SublimeCodeIntel\\\\",
+			"C:\\Users\\yguo\\AppData\\Roaming\\Sublime Text 3\\Packages\\SublimeCodeIntel"
 		],
-		"reverse": true,
+		"reverse": false,
 		"show_context": true,
 		"use_buffer2": true,
 		"whole_word": false,
@@ -271,62 +263,19 @@
 			[
 				{
 					"buffer": 0,
-					"file": "dirtyauto/tests/test_digikey.py",
+					"file": "dirtyauto/crawler/digikey.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 187,
+						"buffer_size": 757,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								132,
-								132
-							]
-						],
-						"settings":
-						{
-							"auto_complete_triggers":
-							[
-								{
-									"characters": ".",
-									"selector": "source.python - string - comment - constant.numeric"
-								},
-								{
-									"characters": ".",
-									"selector": "source.python - string - constant.numeric"
-								},
-								{
-									"characters": ".",
-									"selector": "source.python - string - constant.numeric"
-								}
-							],
-							"syntax": "Packages/Python/Python.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 2.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/D/Eamu/Documents/Github/vec2pat/vec2pat/tests/test_VC5Get.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 647,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								647,
-								647
+								753,
+								753
 							]
 						],
 						"settings":
@@ -342,6 +291,7 @@
 									"selector": "source.python - string - constant.numeric"
 								}
 							],
+							"history_list_is_closing": true,
 							"syntax": "Packages/Python/Python.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
@@ -350,50 +300,29 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 0,
 					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 1,
-			"sheets":
-			[
+				},
 				{
-					"buffer": 2,
-					"file": "dirtyauto/crawler/digikey.py",
+					"buffer": 1,
+					"file": "/C/Users/yguo/AppData/Roaming/Sublime Text 3/Packages/User/SublimeCodeIntel.sublime-settings",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 570,
+						"buffer_size": 1203,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								569,
-								569
+								618,
+								618
 							]
 						],
 						"settings":
 						{
-							"auto_complete_triggers":
-							[
-								{
-									"characters": ".",
-									"selector": "source.python - string - comment - constant.numeric"
-								},
-								{
-									"characters": ".",
-									"selector": "source.python - string - constant.numeric"
-								},
-								{
-									"characters": ".",
-									"selector": "source.python - string - constant.numeric"
-								}
-							],
-							"syntax": "Packages/Python/Python.sublime-syntax",
+							"syntax": "Packages/zzz A File Icon zzz/aliases/JSON (Sublime).sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
@@ -403,66 +332,28 @@
 					},
 					"stack_index": 2,
 					"type": "text"
-				},
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
 				{
-					"buffer": 3,
+					"buffer": 2,
+					"file": "dirtyauto/tests/test_digikey.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3795,
+						"buffer_size": 440,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2740,
-								2740
-							]
-						],
-						"settings":
-						{
-							"auto_indent": false,
-							"default_dir": "D:\\Eamu\\Documents\\Github\\dirtyauto",
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_width": 2,
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 2420.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "dirtyauto/crawler/modeln.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 984,
-						"regions":
-						{
-							"bp-43463e03":
-							{
-								"flags": 16,
-								"icon": "circle",
-								"regions":
-								[
-									[
-										654,
-										707
-									]
-								],
-								"scope": "invalid"
-							}
-						},
-						"selection":
-						[
-							[
-								984,
-								984
+								374,
+								374
 							]
 						],
 						"settings":
@@ -476,72 +367,24 @@
 								{
 									"characters": ".",
 									"selector": "source.python - string - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
 								}
 							],
-							"syntax": "Packages/Python/Python.sublime-syntax"
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "st3.sublime-project",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 648,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								306,
-								306
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/zzz A File Icon zzz/aliases/JSON (Sublime).sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "/C/Users/Eamu/AppData/Roaming/Sublime Text 3/Packages/User/Anaconda.sublime-settings",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 338,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								159,
-								159
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/zzz A File Icon zzz/aliases/JSON (Sublime).sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -549,11 +392,11 @@
 	],
 	"incremental_find":
 	{
-		"height": 48.0
+		"height": 32.0
 	},
 	"input":
 	{
-		"height": 48.0
+		"height": 0.0
 	},
 	"layout":
 	{
@@ -575,7 +418,7 @@
 		"cols":
 		[
 			0.0,
-			0.460689655172,
+			0.505410759446,
 			1.0
 		],
 		"rows":
@@ -587,7 +430,7 @@
 	"menu_visible": true,
 	"output.exec":
 	{
-		"height": 272.0
+		"height": 316.0
 	},
 	"output.find_results":
 	{
@@ -595,13 +438,13 @@
 	},
 	"output.git":
 	{
-		"height": 124.0
+		"height": 238.0
 	},
 	"pinned_build_system": "Anaconda Python Builder",
 	"project": "st3.sublime-project",
 	"replace":
 	{
-		"height": 60.0
+		"height": 92.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -624,12 +467,12 @@
 	},
 	"select_symbol":
 	{
-		"height": 0.0,
+		"height": 216.0,
 		"last_filter": "",
 		"selected_items":
 		[
 		],
-		"width": 0.0
+		"width": 374.0
 	},
 	"selected_group": 0,
 	"settings":
@@ -639,7 +482,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 305.0,
+	"side_bar_width": 198.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

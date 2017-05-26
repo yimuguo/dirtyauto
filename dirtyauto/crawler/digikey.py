@@ -2,18 +2,24 @@ from bs4 import BeautifulSoup
 import requests
 
 
-class DigikeyPartInfo(BeautifulSoup):
+class DigikeyPartInfo(object):
 
-    """docstring for DigikeyPartInfo"""
+    """For parsing part info on digikey"""
 
-    def __init__(self, partn):
+    def __init__(self, part_list):
         """
         :param partn: The stadard part number
         """
-        self._partn = partn
+        self._partList = part_list
+        self.soup = BeautifulSoup("", 'html.parser')
+
+    def get_table(self, _partn):
         page = requests.get(
-            "https://www.digikey.com/products/en?keywords=" + self._partn)
-        self.soup = BeautifulSoup(page.text, 'html.parser').encode('utf-8')
+            "https://www.digikey.com/products/en?keywords=" + _partn)
+        self.soup = BeautifulSoup(page.content, 'html.parser').encode('utf-8')
+        if self.soup.find("table", id="productTable"):
+            # TODO: implement product table parser
+            pass
 
     # def __init__(self, partn):
     #     self._partn = partn
@@ -23,4 +29,7 @@ class DigikeyPartInfo(BeautifulSoup):
     #     self.soup = BeautifulSoup(page.text, 'html.parser').encode('utf-8')
 
     def found_parts(self):
-        return self.soup.find(id='productTable')
+        return self.soup.find("table", id="productTable")
+
+    def parse_table(self):
+        pass

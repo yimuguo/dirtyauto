@@ -31,7 +31,9 @@
         ],
         "follow_symlinks": true,
         "test_project_path": "C:\\devdir\\dirtyauto",
-        "test_command": "python -m unittest discover",
+        "test_command": "python -m unittest",
 		"test_delimeter": ".",  // trial uses "." as delimeter
+		"test_before_command": "set PYTHONPATH=%PYTHONPATH%;C:\\devdir\\dirtyauto\\",
+
 	}
 }
