@@ -7,14 +7,64 @@ class DigikeyPartInfo(object):
 
     """For parsing part info on digikey"""
 
-    def __init__(self):
+    pricing = ""
+    packaging = ""
+    mpn = ""
+    temp = ""
+    moq = ""
+
+    def __init__(self, partn):
         """
         :param part_list: list of the part numbers
         """
         self.log = log(self.__class__.__name__)
+        self.partn = partn
+        self.soup = self.get_soup(self.partn)
+
+    @staticmethod
+    def get_soup(partn):
+        """
+        :param partn part number input
+        """
+        page = requests.get(
+            "https://www.digikey.com/products/en?keywords=" + partn)
+        return BeautifulSoup(page.content, 'html.parser')
+
+    def get_table(self, partn):
+        self.soup = self.get_soup(partn)
+        if self.soup.find("table", id="productTable"):
+            # TODO: implement product table parser
+            pass
+
+    def page_type(self):
+        """
+        :return: return string with type
+        """
+        if self.soup.find('table', id="productTable"):
+            return "productTable"
+        elif self.soup.find('table', id='product-dollars'):
+            return "productPage"
+        elif self.soup.title.name == u'No Results Found | DigiKey Electronics':
+            self.log.error("There's no part found with this part number")
+        elif self.soup.find_all('a', href=True, text=''):
+            # TODO: Get product link working
+            product_lnk = self.soup.find_all('a', href=True, text='')
+            _page = requests.get(product_lnk)
+            self.soup = BeautifulSoup(_page.content, 'html.parser')
+            return "searchPage"
+
+    def parse_table(self):
+        pass
+
+
+class MultiPartDigikey(DigikeyPartInfo):
+    """
+    Processing multiple parts
+    """
+
+    def __init__(self):
+        self.log = log(self.__class__.__name__)
         self._part_list = None
-        # self.part_list = part_list
-        self.soup = BeautifulSoup("", 'html.parser')
 
     @property
     def part_list(self):
@@ -36,45 +86,12 @@ class DigikeyPartInfo(object):
         else:
             self._part_list = part_input
 
-    @staticmethod
-    def get_soup(partn):
-        """
-        :param partn part number input
-        """
-        page = requests.get(
-            "https://www.digikey.com/products/en?keywords=" + partn)
-        return BeautifulSoup(page.content, 'html.parser')
-
-    def get_table(self, partn):
-        self.soup = self.get_soup(partn)
-        if self.soup.find("table", id="productTable"):
-            # TODO: implement product table parser
-            pass
-
-    # def get_html(self):
-    #     self.soup = BeautifulSoup(page.text, 'html.parser').encode('utf-8')
-
     def found_parts(self):
         part_lst = []
         for x in self._part_list:
-            print(x)
             _soup = self.get_soup(x)
             if _soup.find("table", id="productTable"):
                 part_lst.append(1)
             else:
                 part_lst.append(0)
         return part_lst
-
-    def page_type(self, _soup):
-        """
-        :param _soup: Beautifulsoup object
-        :type arg1: class object
-        :return: return string with type
-        """
-        if _soup.find('table', id="productTable"):
-            return "productTable"
-        elif _soup.find('table', id='product-dollars'):
-            return ""
-
-    def parse_table(self):
-        pass
