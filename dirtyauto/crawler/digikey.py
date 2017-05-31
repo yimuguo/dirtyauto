@@ -24,8 +24,7 @@ class DigikeyPartInfo(object):
     def part_list(self, part_input):
         if not isinstance(part_input, list):
             if isinstance(part_input, str):
-                self.log.warning("Input is not a list, \
-                    converting string to list")
+                self.log.warning("Input is not a list, converting string to list")
                 self._part_list = [part_input]
                 return
             elif isinstance(part_input, int):
@@ -33,7 +32,7 @@ class DigikeyPartInfo(object):
                 self._part_list = [str(part_input)]
             else:
                 self.log.error("Input is not a list, cannot process " +
-                                str(type(part_input)))
+                               str(type(part_input)))
         else:
             self._part_list = part_input
 
@@ -44,7 +43,7 @@ class DigikeyPartInfo(object):
         """
         page = requests.get(
             "https://www.digikey.com/products/en?keywords=" + partn)
-        return BeautifulSoup(page.content, 'html.parser').encode('utf-8')
+        return BeautifulSoup(page.content, 'html.parser')
 
     def get_table(self, partn):
         self.soup = self.get_soup(partn)
@@ -65,6 +64,17 @@ class DigikeyPartInfo(object):
             else:
                 part_lst.append(0)
         return part_lst
+
+    def page_type(self, _soup):
+        """
+        :param _soup: Beautifulsoup object
+        :type arg1: class object
+        :return: return string with type
+        """
+        if _soup.find('table', id="productTable"):
+            return "productTable"
+        elif _soup.find('table', id='product-dollars'):
+            return ""
 
     def parse_table(self):
         pass
