@@ -9,5 +9,7 @@
         "-p",
         "test*.py"
     ],
-    "python.unitTest.unittestEnabled": true
+    "python.unitTest.unittestEnabled": true,
+    "editor.lineHeight": 20
+
 }

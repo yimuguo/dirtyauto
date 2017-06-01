@@ -40,18 +40,24 @@ class DigikeyPartInfo(object):
         """
         :return: return string with type
         """
+
+        print(self.soup.title.name)
         if self.soup.find('table', id="productTable"):
             return "productTable"
         elif self.soup.find('table', id='product-dollars'):
             return "productPage"
         elif self.soup.title.name == u'No Results Found | DigiKey Electronics':
+            print(self.soup.title.name)
             self.log.error("There's no part found with this part number")
+            return None
         elif self.soup.find_all('a', href=True, text=''):
             # TODO: Get product link working
-            product_lnk = self.soup.find_all('a', href=True, text='')
+            product_lnk = self.soup.find_all('a', href=True, text='Clock/Timing - Clock Generators, PLLs, Frequency Synthesizers')
             _page = requests.get(product_lnk)
             self.soup = BeautifulSoup(_page.content, 'html.parser')
             return "searchPage"
+        else:
+            self.log.error("Found Nothing here with P/N: " + self.partn)
 
     def parse_table(self):
         pass
