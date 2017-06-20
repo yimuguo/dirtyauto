@@ -32,3 +32,14 @@
 2017-06-01 01:35:26,466 [WARNING] [MultiPartDigikey] Input is not a list, converting string to list
 2017-06-01 01:42:16,951 [WARNING] [MultiPartDigikey] Input is not a list, converting string to list
 2017-06-01 02:02:51,068 [WARNING] [MultiPartDigikey] Input is not a list, converting string to list
+2017-06-01 02:15:45,471 [WARNING] [MultiPartDigikey] Input is not a list, converting string to list
+2017-06-11 22:43:27,349 [WARNING] [MultiPartDigikey] Input is not a list, converting string to list
+2017-06-17 15:44:15,518 [WARNING] [MultiPartDigikey] Input is not a list, converting string to list
+2017-06-17 15:44:38,392 [WARNING] [MultiPartDigikey] Input is not a list, converting string to list
+2017-06-17 15:49:23,933 [WARNING] [MultiPartDigikey] Input is not a list, converting string to list
+2017-06-17 15:52:50,388 [WARNING] [MultiPartDigikey] Input is not a list, converting string to list
+2017-06-17 15:52:51,589 [ERROR] [DigikeyPartInfo] There's no part found with this part number
+2017-06-19 00:05:39,377 [WARNING] [MultiPartDigikey] Input is not a list, converting string to list
+2017-06-19 00:05:40,522 [ERROR] [DigikeyPartInfo] There's no part found with this part number
+2017-06-20 00:00:53,863 [WARNING] [MultiPartDigikey] Input is not a list, converting string to list
+2017-06-20 00:00:55,284 [ERROR] [DigikeyPartInfo] There's no part found with this part number

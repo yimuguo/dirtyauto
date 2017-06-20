@@ -10,10 +10,12 @@ class TestPartNum(unittest.TestCase):
         result = self.idtpn.page_type()
         return result
 
-    def test_page_type(self):
+    def test_page_parts(self):
         self.assertEqual(self._page_type('5PB1102'), 'productTable')
         self.assertEqual(self._page_type('radowm123sds'), None)
         self.assertEqual(self._page_type('8SLVP1204ANLGI8'), 'productPage')
+
+    def test_page_links(self):
         self.assertEqual(self._page_type('5P49V5901'), 'searchPage')
 
     def test_part_price(self):

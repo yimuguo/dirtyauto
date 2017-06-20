@@ -41,18 +41,17 @@ class DigikeyPartInfo(object):
         :return: return string with type
         """
 
-        print(self.soup.title.name)
         if self.soup.find('table', id="productTable"):
             return "productTable"
         elif self.soup.find('table', id='product-dollars'):
             return "productPage"
-        elif self.soup.title.name == u'No Results Found | DigiKey Electronics':
-            print(self.soup.title.name)
+        elif 'No Results Found | DigiKey Electronics' in self.soup.title.string:
             self.log.error("There's no part found with this part number")
             return None
         elif self.soup.find_all('a', href=True, text=''):
-            # TODO: Get product link working
+            # TODO: Generatorst product link working
             product_lnk = self.soup.find_all('a', href=True, text='Clock/Timing - Clock Generators, PLLs, Frequency Synthesizers')
+            print(product_lnk)
             _page = requests.get(product_lnk)
             self.soup = BeautifulSoup(_page.content, 'html.parser')
             return "searchPage"
