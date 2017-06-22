@@ -48,9 +48,19 @@ class DigikeyPartInfo(object):
         elif 'No Results Found | DigiKey Electronics' in self.soup.title.string:
             self.log.error("There's no part found with this part number")
             return None
-        elif self.soup.find_all('a', href=True, text=''):
-            # TODO: Generatorst product link working
-            product_lnk = self.soup.find_all('a', href=True, text='Clock/Timing - Clock Generators, PLLs, Frequency Synthesizers')
+        elif self.soup.find_all('a', href=True, text='Clock/Timing - Clock Generators, PLLs, Frequency Synthesizers'):
+            tree_lnk = self.soup.find(
+                'a', href=True, text='Clock/Timing - Clock Generators, PLLs, Frequency Synthesizers')
+            # print(tree_lnk)
+            # tree_lnk = self.soup.find_all('a', attrs={'href': True,
+            #                                           'class': 'catfilterlink'})
+            # for div in tree_lnk:
+            #     print(div.get('href'))
+            # print(tree_lnk['href'])
+            # print(type(tree_lnk))
+            # print(len(tree_lnk))
+            # print(tree_lnk.get('href'))
+            product_lnk = "https://www.digikey.com/" + tree_lnk.get('href')
             print(product_lnk)
             _page = requests.get(product_lnk)
             self.soup = BeautifulSoup(_page.content, 'html.parser')
@@ -79,7 +89,8 @@ class MultiPartDigikey(DigikeyPartInfo):
     def part_list(self, part_input):
         if not isinstance(part_input, list):
             if isinstance(part_input, str):
-                self.log.warning("Input is not a list, converting string to list")
+                self.log.warning(
+                    "Input is not a list, converting string to list")
                 self._part_list = [part_input]
                 return
             elif isinstance(part_input, int):
