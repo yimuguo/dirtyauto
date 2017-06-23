@@ -46,7 +46,8 @@ class DigikeyPartInfo(object):
         elif self.soup.find('table', id='product-dollars'):
             return "productPage"
         elif 'No Results Found | DigiKey Electronics' in self.soup.title.string:
-            self.log.error("There's no part found with this part number")
+            self.log.error(
+                "There's no part found with this part number on DIGIKEY:" + self.partn)
             return None
         elif self.soup.find_all('a', href=True, text='Clock/Timing - Clock Generators, PLLs, Frequency Synthesizers'):
             tree_lnk = self.soup.find(
