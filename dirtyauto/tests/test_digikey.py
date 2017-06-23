@@ -6,6 +6,7 @@ class TestPartNum(unittest.TestCase):
     idtpn = DigikeyPartInfo("5PB1102")
 
     def _page_type(self, _partNum):
+        self.idtpn.partn = _partNum
         self.idtpn.soup = self.idtpn.get_soup(_partNum)
         result = self.idtpn.page_type()
         return result
