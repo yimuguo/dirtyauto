@@ -30,11 +30,11 @@ class DigikeyPartInfo(object):
             "https://www.digikey.com/products/en?keywords=" + partn)
         return BeautifulSoup(page.content, 'html.parser')
 
-    def get_table(self, partn):
-        self.soup = self.get_soup(partn)
-        if self.soup.find("table", id="productTable"):
-            # TODO: implement product table parser
-            pass
+    def parse_product_table(self):
+        # TODO: Finish product parsing table
+        row_lnks = self.soup.find_all('td', {"class": "tr-mfgPartNumber"})
+        print(row_lnks)
+        return row_lnks
 
     def page_type(self):
         """
@@ -61,9 +61,9 @@ class DigikeyPartInfo(object):
             # print(type(tree_lnk))
             # print(len(tree_lnk))
             # print(tree_lnk.get('href'))
-            product_lnk = "https://www.digikey.com/" + tree_lnk.get('href')
-            print(product_lnk)
-            _page = requests.get(product_lnk)
+            product_table_lnk = "https://www.digikey.com/" + tree_lnk.get('href')
+            print(product_table_lnk)
+            _page = requests.get(product_table_lnk)
             self.soup = BeautifulSoup(_page.content, 'html.parser')
             return "searchPage"
         else:

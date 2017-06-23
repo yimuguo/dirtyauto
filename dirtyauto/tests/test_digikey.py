@@ -22,6 +22,14 @@ class TestPartNum(unittest.TestCase):
     def test_part_price(self):
         pass
 
+    def test_parse_product_table(self):
+        # TODO: finish parse table
+        self.idtpn.soup = self.idtpn.get_soup('5PB1102')
+        self.assertEqual(self.idtpn.parse_product_table()[0].get('href'),
+                         '/product-detail/en/idt-integrated-device-technology-inc/5PB1102CMGI8/800-2888-2-ND/5253372')
+        # FIXME: after find all couldn't use get
+        pass
+
 
 class TestMultiPartNum(unittest.TestCase):
     """

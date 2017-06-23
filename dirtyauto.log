@@ -95,3 +95,7 @@
 2017-06-22 19:22:54,296 [ERROR] [DigikeyPartInfo] There's no part found with this part number on DIGIKEYradowm123sds
 2017-06-23 00:37:42,158 [WARNING] [MultiPartDigikey] Input is not a list, converting string to list
 2017-06-23 00:37:43,763 [ERROR] [DigikeyPartInfo] There's no part found with this part number on DIGIKEY:radowm123sds
+2017-06-23 01:11:36,850 [WARNING] [MultiPartDigikey] Input is not a list, converting string to list
+2017-06-23 01:11:38,540 [ERROR] [DigikeyPartInfo] There's no part found with this part number on DIGIKEY:radowm123sds
+2017-06-23 01:11:50,930 [WARNING] [MultiPartDigikey] Input is not a list, converting string to list
+2017-06-23 01:12:16,030 [WARNING] [MultiPartDigikey] Input is not a list, converting string to list
