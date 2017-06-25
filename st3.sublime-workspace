@@ -4,6 +4,34 @@
 		"selected_items":
 		[
 			[
+				"int",
+				"int_lnk\tstatement"
+			],
+			[
+				"fin",
+				"find"
+			],
+			[
+				"digik",
+				"DigikeyPartInfo\tclass"
+			],
+			[
+				"par",
+				"partn\tstatement"
+			],
+			[
+				"ge",
+				"get_soup\tfunction"
+			],
+			[
+				"ro",
+				"row_lnks\tstatement"
+			],
+			[
+				"parse",
+				"parse_product_table\tfunction"
+			],
+			[
 				"paget",
 				"_page_type\tfunction"
 			],
@@ -56,10 +84,6 @@
 				"part_list\tparam"
 			],
 			[
-				"par",
-				"part"
-			],
-			[
 				"find",
 				"find_all\tfunction"
 			],
@@ -72,19 +96,19 @@
 	"buffers":
 	[
 		{
-			"file": "dirtyauto/crawler/digikey.py",
+			"file": "dirtyauto/tests/test_digikey.py",
 			"settings":
 			{
-				"buffer_size": 3644,
+				"buffer_size": 1621,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "dirtyauto/tests/test_digikey.py",
+			"file": "dirtyauto/crawler/digikey.py",
 			"settings":
 			{
-				"buffer_size": 1254,
+				"buffer_size": 3958,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -133,13 +157,33 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 446.0,
-		"last_filter": "",
+		"height": 273.0,
+		"last_filter": "anaconda test",
 		"selected_items":
 		[
 			[
+				"anaconda test",
+				"Anaconda: Run Last Test"
+			],
+			[
+				"test",
+				"Anaconda: Run Current Test"
+			],
+			[
 				"git push",
 				"Git: Push"
+			],
+			[
+				"git com",
+				"Git: Commit"
+			],
+			[
+				"git a",
+				"Git: Add All"
+			],
+			[
+				"pep",
+				"Anaconda: Autoformat PEP8 Errors"
 			],
 			[
 				"commi",
@@ -194,16 +238,8 @@
 				"Git: Add All"
 			],
 			[
-				"pep",
-				"Anaconda: Autoformat PEP8 Errors"
-			],
-			[
 				"automo",
 				"Anaconda: Autoformat PEP8 Errors"
-			],
-			[
-				"test",
-				"Anaconda: Run Last Test"
 			],
 			[
 				"git add a",
@@ -266,10 +302,6 @@
 				"Python Breakpoints: Clear All"
 			],
 			[
-				"anaconda test",
-				"Anaconda: Run Current File Tests"
-			],
-			[
 				"package install",
 				"Package Control: Install Package"
 			],
@@ -286,7 +318,7 @@
 				"Package Control: List Packages"
 			]
 		],
-		"width": 549.0
+		"width": 456.0
 	},
 	"console":
 	{
@@ -313,10 +345,15 @@
 	[
 		"/D/Eamu/Documents/Github/dirtyauto",
 		"/D/Eamu/Documents/Github/dirtyauto/dirtyauto",
-		"/D/Eamu/Documents/Github/dirtyauto/dirtyauto/crawler/__pycache__"
+		"/D/Eamu/Documents/Github/dirtyauto/dirtyauto/__pycache__"
 	],
 	"file_history":
 	[
+		"/C/Anaconda3/envs/py35/lib/site-packages/requests/__init__.py",
+		"/C/Users/Eamu/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-mousemap",
+		"/C/Users/Eamu/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/Eamu/AppData/Roaming/Sublime Text 3/Packages/SublimeCodeIntel/Default (Windows).sublime-mousemap",
+		"/C/Users/Eamu/AppData/Roaming/Sublime Text 3/Packages/Anaconda/anaconda_lib/workers/local_worker.py",
 		"/C/Anaconda3/envs/py35/lib/unittest/case.py",
 		"/D/Eamu/Documents/Github/dirtyauto/.gitignore",
 		"/D/Eamu/Documents/Github/dirtyauto/dirtyauto.log",
@@ -393,6 +430,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"get_soup",
 			"part_input",
 			"_partn",
 			"sys",
@@ -425,19 +463,19 @@
 			[
 				{
 					"buffer": 0,
-					"file": "dirtyauto/crawler/digikey.py",
+					"file": "dirtyauto/tests/test_digikey.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3644,
+						"buffer_size": 1621,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								813,
-								813
+								946,
+								946
 							]
 						],
 						"settings":
@@ -447,6 +485,94 @@
 								{
 									"characters": ".",
 									"selector": "source.python - string - comment - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								}
+							],
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 286.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 1,
+					"file": "dirtyauto/crawler/digikey.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3958,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1063,
+								1087
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": ".",
+									"selector": "source.python - string - comment - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
 								},
 								{
 									"characters": ".",
@@ -496,73 +622,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 590.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "dirtyauto/tests/test_digikey.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1254,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								89,
-								89
-							]
-						],
-						"settings":
-						{
-							"auto_complete_triggers":
-							[
-								{
-									"characters": ".",
-									"selector": "source.python - string - comment - constant.numeric"
-								},
-								{
-									"characters": ".",
-									"selector": "source.python - string - constant.numeric"
-								},
-								{
-									"characters": ".",
-									"selector": "source.python - string - constant.numeric"
-								},
-								{
-									"characters": ".",
-									"selector": "source.python - string - constant.numeric"
-								},
-								{
-									"characters": ".",
-									"selector": "source.python - string - constant.numeric"
-								},
-								{
-									"characters": ".",
-									"selector": "source.python - string - constant.numeric"
-								},
-								{
-									"characters": ".",
-									"selector": "source.python - string - constant.numeric"
-								},
-								{
-									"characters": ".",
-									"selector": "source.python - string - constant.numeric"
-								}
-							],
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/Python/Python.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 69.0,
+						"translation.y": 460.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -588,11 +648,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.432862190813,
 			1.0
 		],
 		"rows":
@@ -604,7 +671,7 @@
 	"menu_visible": false,
 	"output.exec":
 	{
-		"height": 310.0
+		"height": 514.0
 	},
 	"output.find_results":
 	{
@@ -655,8 +722,8 @@
 	"show_minimap": true,
 	"show_open_files": true,
 	"show_tabs": true,
-	"side_bar_visible": true,
-	"side_bar_width": 181.0,
+	"side_bar_visible": false,
+	"side_bar_width": 238.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

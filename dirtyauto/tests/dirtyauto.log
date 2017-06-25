@@ -1,0 +1,2 @@
+2017-06-25 03:57:28,664 [WARNING] [MultiPartDigikey] Input is not a list, converting string to list
+2017-06-25 03:57:30,822 [ERROR] [DigikeyPartInfo] There's no part found with this part number on DIGIKEY:radowm123sds

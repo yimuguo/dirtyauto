@@ -30,11 +30,17 @@ class DigikeyPartInfo(object):
             "https://www.digikey.com/products/en?keywords=" + partn)
         return BeautifulSoup(page.content, 'html.parser')
 
-    def parse_product_table(self):
-        # TODO: Finish product parsing table
-        row_lnks = self.soup.find_all('td', {"class": "tr-mfgPartNumber"})
-        print(row_lnks)
-        return row_lnks
+    def get_productlnk_from_productTable(self):
+        """
+        :return: return list with product links from product search table
+        """
+        links = []
+        row_soup = self.soup.find_all('td', {"class": "tr-mfgPartNumber"})
+        for item in row_soup:
+            int_lnk = item.find('a').get('href')
+            links.append("https://www.digikey.com" + int_lnk)
+        print(links)
+        return links
 
     def page_type(self):
         """
@@ -61,7 +67,7 @@ class DigikeyPartInfo(object):
             # print(type(tree_lnk))
             # print(len(tree_lnk))
             # print(tree_lnk.get('href'))
-            product_table_lnk = "https://www.digikey.com/" + tree_lnk.get('href')
+            product_table_lnk = "https://www.digikey.com" + tree_lnk.get('href')
             print(product_table_lnk)
             _page = requests.get(product_table_lnk)
             self.soup = BeautifulSoup(_page.content, 'html.parser')
