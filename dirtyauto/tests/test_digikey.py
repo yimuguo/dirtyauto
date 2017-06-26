@@ -18,7 +18,9 @@ class TestPartNum(unittest.TestCase):
     def test_page_links(self):
         self.assertEqual(self._page_type('5P49V5901'), 'searchPage')
 
-    def test_part_price(self):
+    def test_parse_pricing_table(self):
+        self.idtpn = DigikeyPartInfo('5P49v6901')
+        self.idtpn.parse_pricing_table()
         pass
 
     def test_get_product_table_lnk(self):

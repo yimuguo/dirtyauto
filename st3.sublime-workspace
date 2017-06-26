@@ -99,7 +99,7 @@
 			"file": "dirtyauto/tests/test_digikey.py",
 			"settings":
 			{
-				"buffer_size": 1621,
+				"buffer_size": 1523,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -108,7 +108,7 @@
 			"file": "dirtyauto/crawler/digikey.py",
 			"settings":
 			{
-				"buffer_size": 3958,
+				"buffer_size": 3563,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -157,21 +157,33 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 273.0,
-		"last_filter": "anaconda test",
+		"height": 446.0,
+		"last_filter": "pep",
 		"selected_items":
 		[
 			[
-				"anaconda test",
-				"Anaconda: Run Last Test"
-			],
-			[
-				"test",
-				"Anaconda: Run Current Test"
+				"pep",
+				"Anaconda: Autoformat PEP8 Errors"
 			],
 			[
 				"git push",
 				"Git: Push"
+			],
+			[
+				"git comm",
+				"Git: Commit"
+			],
+			[
+				"git add",
+				"Git: Add All"
+			],
+			[
+				"anaconda test",
+				"Anaconda: Run Current Test"
+			],
+			[
+				"test",
+				"Anaconda: Run Current Test"
 			],
 			[
 				"git com",
@@ -180,10 +192,6 @@
 			[
 				"git a",
 				"Git: Add All"
-			],
-			[
-				"pep",
-				"Anaconda: Autoformat PEP8 Errors"
 			],
 			[
 				"commi",
@@ -196,14 +204,6 @@
 			[
 				"git pul",
 				"Git: Pull"
-			],
-			[
-				"git comm",
-				"Git: Commit"
-			],
-			[
-				"git add",
-				"Git: Add All"
 			],
 			[
 				"git pull",
@@ -318,7 +318,7 @@
 				"Package Control: List Packages"
 			]
 		],
-		"width": 456.0
+		"width": 549.0
 	},
 	"console":
 	{
@@ -467,15 +467,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1621,
+						"buffer_size": 1523,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								946,
-								946
+								388,
+								388
 							]
 						],
 						"settings":
@@ -529,7 +529,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 286.0,
+						"translation.y": 10.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -547,15 +547,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3958,
+						"buffer_size": 3563,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1063,
-								1087
+								690,
+								690
 							]
 						],
 						"settings":
@@ -622,7 +622,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 460.0,
+						"translation.y": 541.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -659,7 +659,7 @@
 		"cols":
 		[
 			0.0,
-			0.432862190813,
+			0.455888506602,
 			1.0
 		],
 		"rows":

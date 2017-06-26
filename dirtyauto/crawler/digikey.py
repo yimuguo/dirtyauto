@@ -5,13 +5,10 @@ from dirtyauto import log
 
 class DigikeyPartInfo(object):
 
-    """For parsing part info on digikey"""
-
-    pricing = ""
-    packaging = ""
-    mpn = ""
-    temp = ""
-    moq = ""
+    """For parsing part info on digikey
+    qty: [1, 10, 25, 50, 100, 250, 500, 1000, 1250, 3000] units
+    """
+    info = {'mpn': "", 'pkging': "", 'avail': "", 'qty': 0}
 
     def __init__(self, partn):
         """
@@ -39,14 +36,26 @@ class DigikeyPartInfo(object):
         for item in row_soup:
             int_lnk = item.find('a').get('href')
             links.append("https://www.digikey.com" + int_lnk)
-        print(links)
+            self.log.info("[Scrap]" + int_lnk)
+        # print(links)
         return links
+
+    def parse_pricing_table(self):
+        table = self.soup.find('table', id='product-dollars')
+        rows = table.find_all('tr')
+        for row in rows:
+            print(row)
+            cols = rows.find_all('td')
+            print(cols)
+            for col in cols:
+                self.info[col] = None
+                col = col + 2
+            print(self.info)
 
     def page_type(self):
         """
         :return: return string with type
         """
-
         if self.soup.find('table', id="productTable"):
             return "productTable"
         elif self.soup.find('table', id='product-dollars'):
@@ -58,25 +67,35 @@ class DigikeyPartInfo(object):
         elif self.soup.find_all('a', href=True, text='Clock/Timing - Clock Generators, PLLs, Frequency Synthesizers'):
             tree_lnk = self.soup.find(
                 'a', href=True, text='Clock/Timing - Clock Generators, PLLs, Frequency Synthesizers')
-            # print(tree_lnk)
-            # tree_lnk = self.soup.find_all('a', attrs={'href': True,
-            #                                           'class': 'catfilterlink'})
-            # for div in tree_lnk:
-            #     print(div.get('href'))
-            # print(tree_lnk['href'])
-            # print(type(tree_lnk))
-            # print(len(tree_lnk))
-            # print(tree_lnk.get('href'))
-            product_table_lnk = "https://www.digikey.com" + tree_lnk.get('href')
+            product_table_lnk = "https://www.digikey.com" + \
+                tree_lnk.get('href')
             print(product_table_lnk)
+            self.log.info('Redirect soup to product search page link under Clock/Timing')
+            _page = requests.get(product_table_lnk)
+            self.soup = BeautifulSoup(_page.content, 'html.parser')
+            return "searchPage"
+        elif self.soup.find_all('a', href=True, text='Clock/Timing - Clock Buffers, Drivers'):
+            tree_lnk = self.soup.find(
+                'a', href=True, text='Clock/Timing - Clock Buffers, Drivers')
+            product_table_lnk = "https://www.digikey.com" + \
+                tree_lnk.get('href')
+            print(product_table_lnk)
+            self.log.info('Redirect soup to product search page link under Clock/Timing-buffers')
+            _page = requests.get(product_table_lnk)
+            self.soup = BeautifulSoup(_page.content, 'html.parser')
+            return "searchPage"
+        elif self.soup.find_all('a', href=True, text='Programmable Oscillators'):
+            tree_lnk = self.soup.find(
+                'a', href=True, text='Programmable Oscillators')
+            product_table_lnk = "https://www.digikey.com" + \
+                tree_lnk.get('href')
+            print(product_table_lnk)
+            self.log.info('Redirect soup to product search page link under programmable osc')
             _page = requests.get(product_table_lnk)
             self.soup = BeautifulSoup(_page.content, 'html.parser')
             return "searchPage"
         else:
             self.log.error("Found Nothing here with P/N: " + self.partn)
-
-    def parse_table(self):
-        pass
 
 
 class MultiPartDigikey(DigikeyPartInfo):
