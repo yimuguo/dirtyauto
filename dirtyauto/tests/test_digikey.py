@@ -3,7 +3,7 @@ from dirtyauto.crawler.digikey import DigikeyPartInfo, MultiPartDigikey
 
 
 class TestPartNum(unittest.TestCase):
-    idtpn = DigikeyPartInfo("5PB1102")
+    idtpn = DigikeyPartInfo("5P49V6901")
 
     def _page_type(self, _partNum):
         self.idtpn = DigikeyPartInfo(_partNum)
@@ -21,7 +21,17 @@ class TestPartNum(unittest.TestCase):
     def test_parse_pricing_table(self):
         self.idtpn = DigikeyPartInfo('5P49v6901')
         self.idtpn.parse_pricing_table()
-        pass
+        unit1_price = self.idtpn.info['1']
+        self.assertEqual(unit1_price, '11.35000')
+
+    def test_parse_mpn(self):
+        self.idtpn = DigikeyPartInfo('5P49V6901')
+        self.idtpn.parse_mpn()
+        self.assertEqual('5P49V6901A000NLGI', self.idtpn.info['mpn'])
+
+    def test_parse_qty(self):
+        self.idtpn.parse_qty()
+        self.assertEqual('2,081', self.idtpn.info['qty'])
 
     def test_get_product_table_lnk(self):
         self.idtpn = DigikeyPartInfo('5PB1102')

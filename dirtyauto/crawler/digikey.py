@@ -43,14 +43,30 @@ class DigikeyPartInfo(object):
     def parse_pricing_table(self):
         table = self.soup.find('table', id='product-dollars')
         rows = table.find_all('tr')
-        for row in rows:
-            print(row)
-            cols = rows.find_all('td')
-            print(cols)
-            for col in cols:
-                self.info[col] = None
-                col = col + 2
-            print(self.info)
+        for row in range(1, len(rows)):
+            # print(rows[row])
+            cols = rows[row].find_all('td')
+            price_break = str(cols[0].text)
+            price_break = price_break.strip()
+            # print(price_break)
+            unit_price = str(cols[1].text)
+            unit_price = unit_price.strip()
+            # print(unit_price)
+            self.info[price_break] = unit_price
+        # print(self.info)
+
+    def parse_mpn(self):
+        mpn = self.soup.find('h1', {"itemprop": "model"}).text
+        mpn = ''.join(mpn.split())
+        self.info['mpn'] = mpn
+
+    def parse_qty(self):
+        qty = self.soup.find('span', id='dkQty').text
+        self.info['qty'] = qty
+
+    def parse_manufacturer(self):
+        manu = self.soup.find('span', {"itemprop": "name"}).text
+        self.info['manufacturer'] = manu
 
     def page_type(self):
         """
@@ -70,7 +86,8 @@ class DigikeyPartInfo(object):
             product_table_lnk = "https://www.digikey.com" + \
                 tree_lnk.get('href')
             print(product_table_lnk)
-            self.log.info('Redirect soup to product search page link under Clock/Timing')
+            self.log.info(
+                'Redirect soup to product search page link under Clock/Timing')
             _page = requests.get(product_table_lnk)
             self.soup = BeautifulSoup(_page.content, 'html.parser')
             return "searchPage"
@@ -80,7 +97,8 @@ class DigikeyPartInfo(object):
             product_table_lnk = "https://www.digikey.com" + \
                 tree_lnk.get('href')
             print(product_table_lnk)
-            self.log.info('Redirect soup to product search page link under Clock/Timing-buffers')
+            self.log.info(
+                'Redirect soup to product search page link under Clock/Timing-buffers')
             _page = requests.get(product_table_lnk)
             self.soup = BeautifulSoup(_page.content, 'html.parser')
             return "searchPage"
@@ -90,7 +108,8 @@ class DigikeyPartInfo(object):
             product_table_lnk = "https://www.digikey.com" + \
                 tree_lnk.get('href')
             print(product_table_lnk)
-            self.log.info('Redirect soup to product search page link under programmable osc')
+            self.log.info(
+                'Redirect soup to product search page link under programmable osc')
             _page = requests.get(product_table_lnk)
             self.soup = BeautifulSoup(_page.content, 'html.parser')
             return "searchPage"
