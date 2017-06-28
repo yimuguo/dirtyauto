@@ -1,5 +1,6 @@
 import unittest
 from dirtyauto.crawler.digikey import DigikeyPartInfo, MultiPartDigikey
+import sys
 
 
 class TestPartNum(unittest.TestCase):
@@ -33,6 +34,16 @@ class TestPartNum(unittest.TestCase):
         self.idtpn.parse_qty()
         self.assertEqual('2,081', self.idtpn.info['qty'])
 
+    def test_parse_manufacturer(self):
+        self.idtpn.parse_manufacturer()
+        self.assertEqual('IDT, Integrated Device Technology Inc', self.idtpn.info['manufacturer'])
+
+    def test_parse_prod_attr(self):
+        self.idtpn.parse_prod_attr()
+        print(12345)
+        sys.stdout.write('test')
+        pass
+
     def test_get_product_table_lnk(self):
         self.idtpn = DigikeyPartInfo('5PB1102')
         lnk = self.idtpn.get_productlnk_from_productTable()[0]
@@ -57,5 +68,5 @@ class TestMultiPartNum(unittest.TestCase):
         self.assertEqual(test_avalst, [1])
 
 
-if __name__ == '__main__':
-    unittest.main()
+# if __name__ == '__main__':
+#     unittest.main()

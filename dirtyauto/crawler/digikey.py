@@ -36,9 +36,16 @@ class DigikeyPartInfo(object):
         for item in row_soup:
             int_lnk = item.find('a').get('href')
             links.append("https://www.digikey.com" + int_lnk)
-            self.log.info("[Scrap]" + int_lnk)
+            self.log.info(str(self.partn) + "| Scrap " + int_lnk)
         # print(links)
         return links
+
+    def parse_prod_attr(self):
+        table = self.soup.find('table', id='prod-att-table')
+        # print(table)
+        rows = table.find_all('tr')
+        for tr in rows:
+            print(tr)
 
     def parse_pricing_table(self):
         table = self.soup.find('table', id='product-dollars')
@@ -56,17 +63,40 @@ class DigikeyPartInfo(object):
         # print(self.info)
 
     def parse_mpn(self):
+        """
+        parse manufacturer part number to dict:info
+        """
         mpn = self.soup.find('h1', {"itemprop": "model"}).text
         mpn = ''.join(mpn.split())
         self.info['mpn'] = mpn
 
     def parse_qty(self):
+        """
+        parse available quantity to dict:info
+        """
         qty = self.soup.find('span', id='dkQty').text
         self.info['qty'] = qty
 
     def parse_manufacturer(self):
+        """
+        parse current manufacturer to dict:info
+        """
         manu = self.soup.find('span', {"itemprop": "name"}).text
         self.info['manufacturer'] = manu
+
+    def _find_product_link(self, searchtxt):
+        if self.soup.find('a', href=True, text=searchtxt):
+            tree_lnk = self.soup.find(
+                'a', href=True, text=searchtxt)
+            product_table_lnk = "https://www.digikey.com" + \
+                tree_lnk.get('href')
+            self.log.info(str(self.partn) +
+                          '| Redirect soup to product search page link under ' + searchtxt)
+            _page = requests.get(product_table_lnk)
+            self.soup = BeautifulSoup(_page.content, 'html.parser')
+            return True
+        else:
+            return False
 
     def page_type(self):
         """
@@ -80,38 +110,11 @@ class DigikeyPartInfo(object):
             self.log.error(
                 "There's no part found with this part number on DIGIKEY:" + self.partn)
             return None
-        elif self.soup.find_all('a', href=True, text='Clock/Timing - Clock Generators, PLLs, Frequency Synthesizers'):
-            tree_lnk = self.soup.find(
-                'a', href=True, text='Clock/Timing - Clock Generators, PLLs, Frequency Synthesizers')
-            product_table_lnk = "https://www.digikey.com" + \
-                tree_lnk.get('href')
-            print(product_table_lnk)
-            self.log.info(
-                'Redirect soup to product search page link under Clock/Timing')
-            _page = requests.get(product_table_lnk)
-            self.soup = BeautifulSoup(_page.content, 'html.parser')
+        elif self._find_product_link('Clock/Timing - Clock Generators, PLLs, Frequency Synthesizers'):
             return "searchPage"
-        elif self.soup.find_all('a', href=True, text='Clock/Timing - Clock Buffers, Drivers'):
-            tree_lnk = self.soup.find(
-                'a', href=True, text='Clock/Timing - Clock Buffers, Drivers')
-            product_table_lnk = "https://www.digikey.com" + \
-                tree_lnk.get('href')
-            print(product_table_lnk)
-            self.log.info(
-                'Redirect soup to product search page link under Clock/Timing-buffers')
-            _page = requests.get(product_table_lnk)
-            self.soup = BeautifulSoup(_page.content, 'html.parser')
+        elif self._find_product_link('Clock/Timing - Clock Buffers, Drivers'):
             return "searchPage"
-        elif self.soup.find_all('a', href=True, text='Programmable Oscillators'):
-            tree_lnk = self.soup.find(
-                'a', href=True, text='Programmable Oscillators')
-            product_table_lnk = "https://www.digikey.com" + \
-                tree_lnk.get('href')
-            print(product_table_lnk)
-            self.log.info(
-                'Redirect soup to product search page link under programmable osc')
-            _page = requests.get(product_table_lnk)
-            self.soup = BeautifulSoup(_page.content, 'html.parser')
+        elif self._find_product_link('Programmable Oscillators'):
             return "searchPage"
         else:
             self.log.error("Found Nothing here with P/N: " + self.partn)

@@ -4,12 +4,28 @@
 		"selected_items":
 		[
 			[
-				"int",
-				"int_lnk\tstatement"
+				"wr",
+				"write\tfunction"
+			],
+			[
+				"find",
+				"find_all\tfunction"
+			],
+			[
+				"unit",
+				"unit_price\tstatement"
 			],
 			[
 				"fin",
-				"find"
+				"find_all"
+			],
+			[
+				"product",
+				"product-dollars"
+			],
+			[
+				"int",
+				"int_lnk\tstatement"
 			],
 			[
 				"digik",
@@ -84,10 +100,6 @@
 				"part_list\tparam"
 			],
 			[
-				"find",
-				"find_all\tfunction"
-			],
-			[
 				"Par",
 				"PartBS4\tclass"
 			]
@@ -96,10 +108,19 @@
 	"buffers":
 	[
 		{
+			"file": "st3.sublime-project",
+			"settings":
+			{
+				"buffer_size": 893,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
 			"file": "dirtyauto/tests/test_digikey.py",
 			"settings":
 			{
-				"buffer_size": 1523,
+				"buffer_size": 2342,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -108,7 +129,7 @@
 			"file": "dirtyauto/crawler/digikey.py",
 			"settings":
 			{
-				"buffer_size": 3563,
+				"buffer_size": 5437,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -158,16 +179,60 @@
 	"command_palette":
 	{
 		"height": 446.0,
-		"last_filter": "pep",
+		"last_filter": "anaconda ",
 		"selected_items":
 		[
+			[
+				"anaconda ",
+				"Anaconda: Run Current Test"
+			],
+			[
+				"anaconda test",
+				"Anaconda: Run Current Test"
+			],
+			[
+				"anaconda run ",
+				"Anaconda: Run Current Test"
+			],
 			[
 				"pep",
 				"Anaconda: Autoformat PEP8 Errors"
 			],
 			[
+				"anaconda run u",
+				"Anaconda: Run Current Test"
+			],
+			[
+				"anaconda run",
+				"Anaconda: Run Current Test"
+			],
+			[
+				"anaconda current",
+				"Anaconda: Run Current Test"
+			],
+			[
 				"git push",
 				"Git: Push"
+			],
+			[
+				"git commit",
+				"Git: Commit"
+			],
+			[
+				"git add al",
+				"Git: Add All"
+			],
+			[
+				"anaconda curr",
+				"Anaconda: Run Current Test"
+			],
+			[
+				"anaconda cur",
+				"Anaconda: Run Current Test"
+			],
+			[
+				"git pull",
+				"Git: Pull"
 			],
 			[
 				"git comm",
@@ -176,10 +241,6 @@
 			[
 				"git add",
 				"Git: Add All"
-			],
-			[
-				"anaconda test",
-				"Anaconda: Run Current Test"
 			],
 			[
 				"test",
@@ -206,10 +267,6 @@
 				"Git: Pull"
 			],
 			[
-				"git pull",
-				"Git: Pull"
-			],
-			[
 				"git sta",
 				"Git: Stash Apply"
 			],
@@ -232,10 +289,6 @@
 			[
 				"push",
 				"Git: Push"
-			],
-			[
-				"git add al",
-				"Git: Add All"
 			],
 			[
 				"automo",
@@ -325,6 +378,15 @@
 		"height": 542.0,
 		"history":
 		[
+			"sys.setdefaultencoding(\"utf-8\")",
+			"reload(sys)",
+			"from imp import reload",
+			"import sys",
+			"exit()",
+			"reload(sys)",
+			"from imp import reload",
+			"reload(sys)",
+			"import sys",
 			"cwd",
 			"dir",
 			"exit()",
@@ -343,12 +405,12 @@
 	},
 	"expanded_folders":
 	[
-		"/D/Eamu/Documents/Github/dirtyauto",
-		"/D/Eamu/Documents/Github/dirtyauto/dirtyauto",
-		"/D/Eamu/Documents/Github/dirtyauto/dirtyauto/__pycache__"
+		"/D/Eamu/Documents/Github/dirtyauto"
 	],
 	"file_history":
 	[
+		"/D/Eamu/Documents/Github/dirtyauto/dirtyauto/tests/dirtyauto.log",
+		"/C/Users/Eamu/AppData/Roaming/Sublime Text 3/Packages/User/Anaconda.sublime-settings",
 		"/C/Anaconda3/envs/py35/lib/site-packages/requests/__init__.py",
 		"/C/Users/Eamu/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-mousemap",
 		"/C/Users/Eamu/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
@@ -384,7 +446,6 @@
 		"/D/Eamu/Documents/Github/dirtyauto/st3.sublime-project",
 		"/C/Users/Eamu/AppData/Roaming/Sublime Text 3/Packages/SublimeREPL/SublimeREPL.sublime-settings",
 		"/C/Users/Eamu/Dropbox (Personal)/Resume/Skills.txt",
-		"/C/Users/Eamu/AppData/Roaming/Sublime Text 3/Packages/User/Anaconda.sublime-settings",
 		"/C/Users/Eamu/AppData/Roaming/Sublime Text 3/Packages/User/SublimeCodeIntel.sublime-settings",
 		"/C/Users/Eamu/AppData/Roaming/Sublime Text 3/Packages/Anaconda/anaconda_lib/builder/python_builder.py",
 		"/C/Users/Eamu/AppData/Roaming/Sublime Text 3/Packages/Anaconda/anaconda_lib/linting/sublime.py",
@@ -430,6 +491,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"self.log",
+			"prod",
+			"product",
+			"product_link",
+			"product-doll",
 			"get_soup",
 			"part_input",
 			"_partn",
@@ -463,19 +529,49 @@
 			[
 				{
 					"buffer": 0,
-					"file": "dirtyauto/tests/test_digikey.py",
+					"file": "st3.sublime-project",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1523,
+						"buffer_size": 893,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								388,
-								388
+								737,
+								737
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/zzz A File Icon zzz/aliases/JSON (Sublime).sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 615.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "dirtyauto/tests/test_digikey.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2342,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1467,
+								1467
 							]
 						],
 						"settings":
@@ -485,6 +581,22 @@
 								{
 									"characters": ".",
 									"selector": "source.python - string - comment - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
 								},
 								{
 									"characters": ".",
@@ -529,10 +641,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 10.0,
+						"translation.y": 963.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -542,20 +654,20 @@
 			"sheets":
 			[
 				{
-					"buffer": 1,
+					"buffer": 2,
 					"file": "dirtyauto/crawler/digikey.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3563,
+						"buffer_size": 5437,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								690,
-								690
+								1368,
+								1368
 							]
 						],
 						"settings":
@@ -565,6 +677,22 @@
 								{
 									"characters": ".",
 									"selector": "source.python - string - comment - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
 								},
 								{
 									"characters": ".",
@@ -622,10 +750,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 541.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -633,7 +761,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 58.0
+		"height": 88.0
 	},
 	"input":
 	{
@@ -659,7 +787,7 @@
 		"cols":
 		[
 			0.0,
-			0.455888506602,
+			0.5,
 			1.0
 		],
 		"rows":
@@ -671,7 +799,7 @@
 	"menu_visible": false,
 	"output.exec":
 	{
-		"height": 514.0
+		"height": 382.0
 	},
 	"output.find_results":
 	{
@@ -679,7 +807,7 @@
 	},
 	"output.git":
 	{
-		"height": 124.0
+		"height": 271.0
 	},
 	"pinned_build_system": "Anaconda Python Builder",
 	"project": "st3.sublime-project",
@@ -723,7 +851,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": false,
-	"side_bar_width": 238.0,
+	"side_bar_width": 199.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
