@@ -30,3 +30,5 @@
 2017-06-28 00:27:10,229 [INFO] [DigikeyPartInfo] 5PB1102| Scrap /product-detail/en/idt-integrated-device-technology-inc/5PB1102PGGI/800-2889-5-ND/5189631
 2017-06-28 00:27:10,730 [INFO] [DigikeyPartInfo] 5P49V5901| Redirect soup to product search page link under Clock/Timing - Clock Generators, PLLs, Frequency Synthesizers
 2017-06-28 00:27:12,463 [ERROR] [DigikeyPartInfo] There's no part found with this part number on DIGIKEY:radowm123sds
+2017-06-28 15:57:39,803 [WARNING] [MultiPartDigikey] Input is not a list, converting string to list
+2017-06-28 15:57:48,587 [WARNING] [MultiPartDigikey] Input is not a list, converting string to list

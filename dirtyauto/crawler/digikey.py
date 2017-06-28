@@ -41,6 +41,7 @@ class DigikeyPartInfo(object):
         return links
 
     def parse_prod_attr(self):
+        # TODO: Finish product attribute
         table = self.soup.find('table', id='prod-att-table')
         # print(table)
         rows = table.find_all('tr')
