@@ -12,3 +12,4 @@ dirtyauto/__pycache__
 dirtyauto/crawler/__pycache__
 dirtyauto/tests/__pycache__
 dirtyauto/qlik2xls.ini
+dirtyauto/debug.log
