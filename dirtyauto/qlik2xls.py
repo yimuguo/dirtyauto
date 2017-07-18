@@ -52,7 +52,17 @@ def main():
     config = configparser.ConfigParser()
     config.read('qlik2xls.ini')
     if config.sections():
-        pass
+        if USER_PROFILE is not 'DEFAULT':
+            if config[USER_PROFILE]:
+                if config[USER_PROFILE]['usr']:
+                    if config[USER_PROFILE]['pwd']:
+                        pass
+                    else:
+                        sys.exit("\"pwd\" IS NOT PRESENT IN CONFIG FILE\n")
+                else:
+                    sys.exit("\"usr\" IS NOT PRESENT IN THE CONFIG FILE\n")
+            else:
+                sys.exit("USERPROFILE NOT FOUND IN CONFIG FILE\n")
     else:
         print("qlik2xls NOT FOUND IN DIRECTORY, CREATING DEFAULT CONFIG FILE")
         config = make_cfg()
