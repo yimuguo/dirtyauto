@@ -5,7 +5,7 @@
 			"file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
 			"name": "Anaconda Python Builder",
 			"selector": "source.python",
-			"shell_cmd": "\"C:\\Anaconda3\\envs\\py35\\python.exe\" -u \"$file\"",
+			"shell_cmd": "\"C:\\Anaconda3\\envs\\py35\\python.exe\" -u \"$file\" yguo",
 			"env": {
 				"PYTHONPATH": "C:\\devdir\\dirtyauto"
 			}
