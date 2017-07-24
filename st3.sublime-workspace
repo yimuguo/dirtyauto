@@ -4,6 +4,34 @@
 		"selected_items":
 		[
 			[
+				"time",
+				"timeout\tparam"
+			],
+			[
+				"Chrom",
+				"ChromeOptions\tclass"
+			],
+			[
+				"web",
+				"webdriver\tmodule"
+			],
+			[
+				"USER",
+				"USER_PROFILE\tstatement"
+			],
+			[
+				"pass",
+				"Password"
+			],
+			[
+				"confi",
+				"config\tstatement"
+			],
+			[
+				"config",
+				"ConfigParser\tclass"
+			],
+			[
 				"find",
 				"find_elements_by_id\tfunction"
 			],
@@ -26,10 +54,6 @@
 			[
 				"all",
 				"all_app\tstatement"
-			],
-			[
-				"web",
-				"WebDriverWait\tclass"
 			],
 			[
 				"wr",
@@ -132,36 +156,28 @@
 	"buffers":
 	[
 		{
-			"file": "dirtyauto/tests/test_digikey.py",
-			"settings":
-			{
-				"buffer_size": 2342,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "dirtyauto/crawler/modeln.py",
-			"settings":
-			{
-				"buffer_size": 984,
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "dirtyauto/qlik2xls.py",
 			"settings":
 			{
-				"buffer_size": 1646,
+				"buffer_size": 3602,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "dirtyauto/crawler/digikey.py",
+			"file": "dirtyauto/monitor_directory.py",
 			"settings":
 			{
-				"buffer_size": 5478,
+				"buffer_size": 605,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "dirtyauto/qlik2xls.ini",
+			"settings":
+			{
+				"buffer_size": 137,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -210,10 +226,30 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 446.0,
-		"last_filter": "",
+		"height": 482.0,
+		"last_filter": "git push",
 		"selected_items":
 		[
+			[
+				"git push",
+				"Git: Push"
+			],
+			[
+				"git com",
+				"Git: Commit"
+			],
+			[
+				"git ad",
+				"Git: Add All"
+			],
+			[
+				"pull",
+				"Git: Pull"
+			],
+			[
+				"gitigno",
+				"Gitignore: New gitignore"
+			],
 			[
 				"git al",
 				"Git: Add All"
@@ -229,10 +265,6 @@
 			[
 				"git stash",
 				"Git: Stash Changes"
-			],
-			[
-				"git push",
-				"Git: Push"
 			],
 			[
 				"git comm",
@@ -291,20 +323,12 @@
 				"Anaconda: Run Current Test"
 			],
 			[
-				"git com",
-				"Git: Commit"
-			],
-			[
 				"git a",
 				"Git: Add All"
 			],
 			[
 				"commi",
 				"Git: Commit"
-			],
-			[
-				"git ad",
-				"Git: Add All"
 			],
 			[
 				"git sta",
@@ -337,10 +361,6 @@
 			[
 				"git add a",
 				"Git: Add All"
-			],
-			[
-				"pull",
-				"Git: Pull"
 			],
 			[
 				"git add all",
@@ -407,7 +427,7 @@
 				"Package Control: List Packages"
 			]
 		],
-		"width": 549.0
+		"width": 796.0
 	},
 	"console":
 	{
@@ -445,14 +465,24 @@
 	[
 		"/D/Eamu/Documents/Github/dirtyauto",
 		"/D/Eamu/Documents/Github/dirtyauto/dirtyauto",
-		"/D/Eamu/Documents/Github/dirtyauto/dirtyauto/crawler"
+		"/D/Eamu/Documents/Github/dirtyauto/dirtyauto/example"
 	],
 	"file_history":
 	[
+		"/D/Eamu/Documents/Github/dirtyauto/dirtyauto.log",
+		"/D/Eamu/Documents/Github/dirtyauto/dirtyauto/__init__.py",
+		"/D/Eamu/Documents/Github/dirtyauto/dirtyauto/monitor_directory.py",
+		"/D/Eamu/Documents/Github/dirtyauto/st3.sublime-project",
+		"/C/Users/Eamu/AppData/Roaming/Sublime Text 3/Packages/User/SublimeREPL.sublime-settings",
+		"/D/Eamu/Documents/Github/dirtyauto/dirtyauto/crawler/modeln.py",
+		"/D/Eamu/Documents/Github/dirtyauto/dirtyauto/tests/test_digikey.py",
+		"/C/Users/Eamu/Dropbox (Personal)/Resume/Skills.txt",
+		"/D/Eamu/Documents/Github/dirtyauto/dirtyauto/crawler/digikey.py",
+		"/D/Eamu/Documents/Github/dirtyauto/.gitignore",
+		"/D/Eamu/Documents/Github/dirtyauto/dirtyauto/debug.log",
 		"/C/Users/Eamu/Dropbox (Personal)/pycharm-token.txt",
 		"/C/Anaconda3/envs/py35/lib/site-packages/selenium/webdriver/support/wait.py",
 		"/D/Eamu/Documents/Github/dirtyauto/dirtyauto/qlkview2xls.py",
-		"/D/Eamu/Documents/Github/dirtyauto/st3.sublime-project",
 		"/D/Eamu/Documents/Github/dirtyauto/dirtyauto/tests/dirtyauto.log",
 		"/C/Users/Eamu/AppData/Roaming/Sublime Text 3/Packages/User/Anaconda.sublime-settings",
 		"/C/Anaconda3/envs/py35/lib/site-packages/requests/__init__.py",
@@ -461,18 +491,13 @@
 		"/C/Users/Eamu/AppData/Roaming/Sublime Text 3/Packages/SublimeCodeIntel/Default (Windows).sublime-mousemap",
 		"/C/Users/Eamu/AppData/Roaming/Sublime Text 3/Packages/Anaconda/anaconda_lib/workers/local_worker.py",
 		"/C/Anaconda3/envs/py35/lib/unittest/case.py",
-		"/D/Eamu/Documents/Github/dirtyauto/.gitignore",
-		"/D/Eamu/Documents/Github/dirtyauto/dirtyauto.log",
 		"/D/Eamu/Documents/Github/vec2pat/vec2pat/tests/test_VC5Get.py",
-		"/D/Eamu/Documents/Github/dirtyauto/dirtyauto/crawler/modeln.py",
 		"/C/Anaconda3/envs/py35/Lib/unittest/__init__.py",
 		"/C/Users/Eamu/AppData/Roaming/Sublime Text 3/Packages/User/EnvironmentSettings.sublime-settings",
 		"/D/Eamu/Documents/Github/dirtyauto/dirtyauto/tests/__init__.py",
 		"/D/Eamu/OneDrive/vs-code-syncid.txt",
 		"/D/Movies/Jerry Maguire (1996)/Torrent downloaded from Demonoid.com - Copy.txt",
-		"/D/Eamu/Documents/Github/dirtyauto/dirtyauto/crawler/digikey.py",
 		"/D/Eamu/Documents/Github/mmt-autobench/autobench/Max_frequency.py",
-		"/D/Eamu/Documents/Github/dirtyauto/dirtyauto/__init__.py",
 		"/D/Eamu/Documents/Github/dirtyauto/dirtyauto/tests/MMTBench.log",
 		"/D/Eamu/Documents/Github/mmt-autobench/autobench/inst/pn_machine.py",
 		"/D/Eamu/Documents/Github/mmt-autobench/autobench/inst/func_gen.py",
@@ -485,10 +510,7 @@
 		"/D/Eamu/Documents/Github/mmt-autobench/autobench/vc5_aa_i2c.py",
 		"/D/Eamu/Documents/Github/mmt-autobench/autobench/__init__.py",
 		"/D/Eamu/Documents/Github/dirtyauto/__init__.py",
-		"/D/Eamu/Documents/Github/dirtyauto/dirtyauto/tests/test_digikey.py",
-		"/C/Users/Eamu/AppData/Roaming/Sublime Text 3/Packages/User/SublimeREPL.sublime-settings",
 		"/C/Users/Eamu/AppData/Roaming/Sublime Text 3/Packages/SublimeREPL/SublimeREPL.sublime-settings",
-		"/C/Users/Eamu/Dropbox (Personal)/Resume/Skills.txt",
 		"/C/Users/Eamu/AppData/Roaming/Sublime Text 3/Packages/User/SublimeCodeIntel.sublime-settings",
 		"/C/Users/Eamu/AppData/Roaming/Sublime Text 3/Packages/Anaconda/anaconda_lib/builder/python_builder.py",
 		"/C/Users/Eamu/AppData/Roaming/Sublime Text 3/Packages/Anaconda/anaconda_lib/linting/sublime.py",
@@ -520,7 +542,7 @@
 	],
 	"find":
 	{
-		"height": 60.0
+		"height": 92.0
 	},
 	"find_in_files":
 	{
@@ -534,6 +556,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"USERPROFILE",
+			"no argument",
+			"USERPROFILE",
 			"self.log",
 			"prod",
 			"product",
@@ -558,7 +583,7 @@
 		"replace_history":
 		[
 		],
-		"reverse": true,
+		"reverse": false,
 		"show_context": true,
 		"use_buffer2": true,
 		"whole_word": false,
@@ -567,24 +592,24 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "dirtyauto/tests/test_digikey.py",
+					"file": "dirtyauto/qlik2xls.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2342,
+						"buffer_size": 3602,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1304,
-								1304
+								3364,
+								3364
 							]
 						],
 						"settings":
@@ -614,96 +639,34 @@
 								{
 									"characters": ".",
 									"selector": "source.python - string - constant.numeric"
-								},
-								{
-									"characters": ".",
-									"selector": "source.python - string - constant.numeric"
-								},
-								{
-									"characters": ".",
-									"selector": "source.python - string - constant.numeric"
-								},
-								{
-									"characters": ".",
-									"selector": "source.python - string - constant.numeric"
-								},
-								{
-									"characters": ".",
-									"selector": "source.python - string - constant.numeric"
-								},
-								{
-									"characters": ".",
-									"selector": "source.python - string - constant.numeric"
-								},
-								{
-									"characters": ".",
-									"selector": "source.python - string - constant.numeric"
-								},
-								{
-									"characters": ".",
-									"selector": "source.python - string - constant.numeric"
-								},
-								{
-									"characters": ".",
-									"selector": "source.python - string - constant.numeric"
 								}
 							],
 							"git_gutter_is_enabled": true,
 							"syntax": "Packages/Python/Python.sublime-syntax",
-							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 879.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "dirtyauto/crawler/modeln.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 984,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								930,
-								930
-							]
-						],
-						"settings":
-						{
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/Python/Python.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 2867.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "dirtyauto/qlik2xls.py",
+					"buffer": 1,
+					"file": "dirtyauto/monitor_directory.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1646,
+						"buffer_size": 605,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								605,
+								605
 							]
 						],
 						"settings":
@@ -717,121 +680,51 @@
 								{
 									"characters": ".",
 									"selector": "source.python - string - constant.numeric"
-								},
-								{
-									"characters": ".",
-									"selector": "source.python - string - constant.numeric"
 								}
 							],
 							"git_gutter_is_enabled": true,
-							"syntax": "Packages/Python/Python.sublime-syntax",
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 131.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "dirtyauto/crawler/digikey.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5478,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1500,
-								1500
-							]
-						],
-						"settings":
-						{
-							"auto_complete_triggers":
-							[
-								{
-									"characters": ".",
-									"selector": "source.python - string - comment - constant.numeric"
-								},
-								{
-									"characters": ".",
-									"selector": "source.python - string - constant.numeric"
-								},
-								{
-									"characters": ".",
-									"selector": "source.python - string - constant.numeric"
-								},
-								{
-									"characters": ".",
-									"selector": "source.python - string - constant.numeric"
-								},
-								{
-									"characters": ".",
-									"selector": "source.python - string - constant.numeric"
-								},
-								{
-									"characters": ".",
-									"selector": "source.python - string - constant.numeric"
-								},
-								{
-									"characters": ".",
-									"selector": "source.python - string - constant.numeric"
-								},
-								{
-									"characters": ".",
-									"selector": "source.python - string - constant.numeric"
-								},
-								{
-									"characters": ".",
-									"selector": "source.python - string - constant.numeric"
-								},
-								{
-									"characters": ".",
-									"selector": "source.python - string - constant.numeric"
-								},
-								{
-									"characters": ".",
-									"selector": "source.python - string - constant.numeric"
-								},
-								{
-									"characters": ".",
-									"selector": "source.python - string - constant.numeric"
-								},
-								{
-									"characters": ".",
-									"selector": "source.python - string - constant.numeric"
-								},
-								{
-									"characters": ".",
-									"selector": "source.python - string - constant.numeric"
-								},
-								{
-									"characters": ".",
-									"selector": "source.python - string - constant.numeric"
-								},
-								{
-									"characters": ".",
-									"selector": "source.python - string - constant.numeric"
-								},
-								{
-									"characters": ".",
-									"selector": "source.python - string - constant.numeric"
-								}
-							],
-							"git_gutter_is_enabled": true,
-							"history_list_is_closing": true,
 							"syntax": "Packages/Python/Python.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 984.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 2,
+					"file": "dirtyauto/qlik2xls.ini",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 137,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								61,
+								61
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"open_with_edit": true,
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
@@ -857,11 +750,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.568721505073,
 			1.0
 		],
 		"rows":
@@ -925,7 +825,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 220.0,
+	"side_bar_width": 349.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
