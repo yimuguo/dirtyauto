@@ -10,6 +10,6 @@
         "test*.py"
     ],
     "python.unitTest.unittestEnabled": true,
-    "editor.lineHeight": 20
+    "editor.lineHeight": 24
 
 }

@@ -114,6 +114,9 @@ def main():
     # funnel_filter_switch = click_by_xpath(
     #     '//*[@id="74"]/div[3]/div/div[1]/div[5]/div/div[3]', driver, timeout=60)
     # time.sleep(3)
+    ref_des_switch = click_by_xpath(
+        '//*[@title="No"]//*[@unselectable="on"]', driver, timeout=120)
+
     funnel_filter_switch = click_by_xpath(
         '//*[@title="Pending"]//*[@unselectable="on"]', driver, timeout=120)
 

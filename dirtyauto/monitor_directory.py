@@ -12,6 +12,7 @@ if __name__ == "__main__":
     event_handler = LoggingEventHandler()
     observer = Observer()
     path = os.environ['USERPROFILE']
+    path = os.path.join(path, 'Downloads')
     print(path)
     observer.schedule(event_handler, path, recursive=True)
     observer.start()
