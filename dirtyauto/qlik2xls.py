@@ -38,6 +38,9 @@ def click_by_title(title, _driver, timeout=30):
 
 
 class ProcessCFG(object):
+    """
+    Process settings .ini configurations
+    """
 
     intranet = 'yes'
     usr = None
@@ -46,6 +49,7 @@ class ProcessCFG(object):
     download_dir = None
 
     def __init__(self, file):
+        self.file = file
         self._config = configparser.ConfigParser()
         # self._config.read('qlik2xls.ini')
         self._config.read(file)
