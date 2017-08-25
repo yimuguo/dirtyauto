@@ -73,13 +73,12 @@ class ProcessCFG(object):
             else:
                 self.profile = 'DEFAULT'
                 if not self._config[self.profile]['intranet']:
-                    raise ValueError[
-                        '\"intranet\" option not found in active profile']
+                    raise ValueError('\"intranet\" option not found in active profile')
         else:
-            raise Exception(
-                self.file + " DEFAULT PROFILE NOT VALID IN DIRECTORY, CREATING DEFAULT CONFIG FILE")
+            print(self.file + " DEFAULT PROFILE NOT VALID IN DIRECTORY, CREATING DEFAULT CONFIG FILE")
             self._config['DEFAULT'] = {'intranet': 'yes',
-                                       'dowload_dir': 'os_default'}
+                                       'download_dir': 'os_default',
+                                       'active_profile': 'DEFAULT'}
             with open(self.file, 'w+') as file:
                 self._config.write(file)
             self.profile = 'DEFAULT'
